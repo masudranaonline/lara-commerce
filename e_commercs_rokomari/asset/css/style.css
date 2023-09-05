@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+ul,
+li,
+.navbar,
+.navbar-nav {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f1f2f4;
+}
+
+/* end common css */
+
+/* start header top section*/
+
+.header_top {
+    border-top: 1px solid #e5e8ef;
+    /* border-bottom: 2px solid #e5e8ef; */
+    height: 78px;
+    background-color: white;
+}
+
+
+
+.header_top img {
+    height: 58px;
+    width: auto;
+    padding: 11px;
+    line-height: 78px;
+    
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+.form-control {
+    border-radius: 0;
+}
+.header_top .selector_product {
+    border-color: #ced4da;
+    cursor: pointer;
+    width: 52px;
+
+}
+.header_top .border_color {
+    border-color: #ced4da;
+    border-radius: 0;
+    background-color: #0397d3;
+    color: white;
+}
+.top a {
+    /* padding-top: 13px; */
+    line-height: 78px;
+
+}
+.cart {
+    font-size: 28px;
+    padding-right: 34px;
+    
+}
+.sign {
+    border: 1px solid #33c24d;
+    padding: 4px 8px;
+    color: black;
+    font-size: 20px;
+    border-radius: 4px
+}
+.sign:hover {
+    background-color: #33c24d;
+    color: white;
+}
+
+/* end header top css */
+
+/* start menuber section*/
+
+.menuber .main_menu {
+    border-bottom: 1px solid #89c4f4;
+
+}
+.menuber {
+    background-color: white;
+}
+.menuber .top_menu ul li {
+    float: left;
+    padding: 8px 12px;
+}
+.menuber .top_menu ul li:hover {
+    border: 1px solid #89c4f4;
+    border-bottom: white;
+
+}
+.menuber .top_menu ul li a {
+    font-size: 18px;
+    color: #82334d;
+}
+.menuber .top_menu ul li a:hover {
+    color: #03a4e0;
+}
+.menuber .second_menu    {
+    border-bottom: 1px solid #d8dbe1;
+    height: 48px;
+} 
+.menuber .sub_menu {
+    line-height: 48px;
+}
+.menuber .sub_menu ul {
+    z-index: 1;
+}
+.menuber .sub_menu ul li {
+    float: left;
+    padding: 0 22px;
+} 
+.menuber .sub_menu ul li a {
+    color: #333333;
+} 
+.menuber .sub_menu ul li a:hover {
+    color: #65a6d4;
+}
+
+.menuber .sub_menu ul > li:hover ul {
+    display: block;
+    width: 674px;
+    background-color: white;
+    z-index: 1;
+}
+.menuber .sub_menu ul > li > ul{
+    position: absolute;
+    display: none;
+}
+.menuber .sub_menu ul > li > ul > li{
+    /* list-style: inside; */
+    width: 220px;
+} 
+.menuber .sub_menu ul > li > ul > li a{
+    display: block;
+} 
+
+
+/* end menuber top css */
+
+/* start advertising section*/
+
+.advertising {
+    height: 60px;
+}
+.advertising .ditels{
+    line-height: 60px;
+    text-align: center;
+}
+.advertising .ditels .icon_color {
+    color: #ff9900;
+}
+.advertising .ditels p{
+    color: #333333;
+}
+
+/* end advertising top css */
+
+/* start reel_of_deal section*/
+
+.product_bg {
+    background-color: white;
+}
+
+
+.title h4 {
+    float: left;
+    font-size: 18px;
+    color: #444444;
+    font-weight: bold;
+}
+.title .btn_more{
+    text-align: end;
+    /* display: block; */
+}
+.title .btn_more a {
+    text-align: end;
+    /* display: block; */
+    padding: 5px 5px;
+    color: #0397d3;
+    font-size: 13px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #0397d3;
+}
+
+.title .btn_more a:hover {
+    background-color: #0397d3;
+    color: white;
+}
+
+.product_list .product_ditels {
+    /* border: 1px solid; */
+    position: relative;
+}
+
+.product_list .product_ditels h3 {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 23px;
+    line-height: 22px;
+    color: #111111;
+    padding: 1px;
+}
+.product_list .product_ditels .book_authore {
+    text-align: center;
+    color: #b7b7b7;
+}
+.product_list .product_ditels .original-price {
+    font-weight: bold;
+    color: #898989;
+    padding-right: 8px;
+}
+
+.product_list .product_ditels .discount-price {
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 8px;
+}
+.product_list .product_ditels .discount {
+    font-weight: bold;
+    color: #f7b1bf;
+    font-size: 12px;
+}
+.pro_overlay {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: rgb(0, 0, 0, 0.62); */
+    opacity: 0;
+    /* transition: 0.5s; */
+    cursor: pointer;
+    
+    
+}
+.pro_overlay a {
+    background-color: #0397d3;
+    color: white;
+    padding: 5px 55px;
+    display: block;
+    top: 90%;
+    position: absolute;
+    
+}
+
+.product_ditels:hover .pro_overlay {
+    height: 100%;
+    opacity: 1;
+    box-shadow: 1px 3px 7px 1px #d84a38;
+}
+
+/* end adverproducttising top css */
+
+/* start treding_category section*/
+.treding_category_item {
+    text-align: center;
+    
+}
+.treding_category_item img {
+    background-color: #cceced;
+    width: 90%;
+    height: 100%;
+    padding: 22px;
+}
+.treding_category_item a {
+    background-color: #0397d3;
+    color: #fff;
+    padding: 6px 56px;
+}
+.treding_category_item a:hover {
+    background-color: #0376a3;
+
+}
+
+/* end treding_category top css */
+
+/* start book_fair section*/
+.book_fair_head {
+    padding-bottom: 10px;
+}
+.book_fair_head img {
+    float: left;
+    padding-right: 50px;
+}
+.book_fair_head p {
+    text-align: left;
+    font-size: 15px;
+}
+
+
+/* end book_fair top css */
+
+/* start superstore section*/
+.superstore h1{
+    text-align: center;
+    padding-top: 30px;
+    color: #333333;
+    font-size: 32px;
+
+}
+.superstore .items .img {
+    
+}
+.superstore .items .img img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 5px 3px;
+}
+}
+.superstore .items .item_name{
+    
+}
+.superstore .items .item_name a {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+.superstore .items .item_name a:hover{
+    color: #54a3ce;
+}
+
+.categori_btn {
+    text-align: center;
+    display: block;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.categori_list .btn_list a {
+    border: 2px solid #bee6f7;
+    padding: 14px 100px;
+    font-size: 16px;
+    color: #66336d;
+
+}
+.categori_list .btn_list a:hover {
+    color: #fff;
+}
