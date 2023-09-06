@@ -546,3 +546,24 @@ body {
 .footer {
     background-color: white;
 }
+
+.footer .customer .whats {
+    float: left;
+}
+
+.footer .customer .details {
+    float: left;
+    padding-left: 16px;
+}
+.footer .customer .details p{
+    color: #666666;
+    font-size: 12px;
+}
+.footer .customer .details a{
+    font-size: 12px;
+    font-weight: bold;
+}
+.footer .customer .details span{
+    color: #666666;
+    font-size: 12px;
+}
