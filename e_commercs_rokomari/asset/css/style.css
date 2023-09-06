@@ -550,7 +550,9 @@ body {
 .footer .customer .whats {
     float: left;
 }
-
+.footer .customer .whats img {
+    width: 32px;
+}
 .footer .customer .details {
     float: left;
     padding-left: 16px;
@@ -562,8 +564,51 @@ body {
 .footer .customer .details a{
     font-size: 12px;
     font-weight: bold;
+    color: #333333;
 }
 .footer .customer .details span{
     color: #666666;
     font-size: 12px;
 }
+.footer .customer .details span a {
+    color: #333333;
+}
+.footer .customer {
+    display: flex;
+}
+
+.footer .home p{
+    color: #333333;
+    font-weight: bold;
+}
+
+.footer .home .footer_menu {
+    padding-left: 24px;
+    padding-top: 6px;
+}
+.footer .home .footer_menu ul li {
+    list-style: circle;
+}
+.footer .home .footer_menu ul li a{
+    color: #6e3333;
+    font-size: 12px;
+}
+
+.footer .social {}
+.footer .social p {
+    color: #333333;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+.footer .social .link{}
+.footer .social .link a{
+    padding-right: 6px;
+}
+.footer .social .download{}
+.footer .social .download img{}
+.footer .social .download span{}
+.footer .social .app_store{
+    display: flex;
+}
+.footer .social .app_store img{}
+
