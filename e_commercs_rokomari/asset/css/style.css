@@ -964,9 +964,9 @@ body {
     border-bottom: 1px solid;
     padding-bottom: 15px;
 }
-.specific_list_page .product_list_sidebar .list_title{
+/* .specific_list_page .product_list_sidebar .list_title{
     padding-bottom: 15px;
-}
+} */
 .specific_list_page .product_list_sidebar p{
     float: left;
     font-size: 24px;
@@ -974,9 +974,24 @@ body {
     font-weight: 500;
 
 }
-.specific_list_page .product_list_sidebar a{
+.specific_list_page .product_list_sidebar .sort a{
     text-align: end;
     display: block;
     color: #1b97d3;
     font-size: 18px;
+}
+ .list_side_menubar ul li input {
+    margin-right: 10px;
+}
+ .list_side_menubar ul li {
+    padding: 7px 20px;
+}
+
+ .list_side_menubar ul li a{
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+}
+.list_side_menubar ul .in_stock_padding{
+    padding: 15px 20px;
 }
