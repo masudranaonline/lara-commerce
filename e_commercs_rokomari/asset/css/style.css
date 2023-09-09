@@ -1247,3 +1247,65 @@ body {
     font-size: 22px;
     padding-bottom: 15px;
 }
+
+
+
+/*Customer Invoice*/
+
+.invoice {}
+.invoice .head{
+    padding: 2px 45px 40px;
+    border-bottom: 2px solid;
+}
+.invoice .head .info_date{
+    float: left;
+}
+.invoice .head .info_date img{
+    width: 136px;
+}
+.invoice .head .info_date p{
+    padding-top: 14px;
+}
+.invoice .head .info_date span{}
+.invoice .head .invc{
+    text-align: end;
+    margin-top: 40px;
+}
+.invoice .head .invc h1{}
+.invoice .Address_info{
+    border-bottom: 2px solid;
+}
+.invoice .Address_info .bill_form{
+    float: left;
+    padding: 19px 30px;
+}
+.invoice .Address_info .bill_to{
+    text-align:  right;
+    padding: 20px 30px;
+}
+.invoice .Address_info .bill_to .right{
+    text-align: left;
+    display: inline-block;
+}
+.invoice .total_ammount {
+    padding-left: 76%;
+    border-bottom: 2px solid;
+}
+.invoice .total_ammount table tbody tr td {
+    font-weight: 500;
+}
+.invoice .total_ammount .all_tka {
+    text-align: end;
+    padding-left: 45px;
+}
+
+.total {
+    padding-left: 76%;
+    padding-top: 20px;
+}
+.total p {
+    font-weight: bold;
+}
+.total p span {
+    padding-left: 85px;
+}
