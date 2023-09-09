@@ -19,6 +19,7 @@ a {
 
 img {
     border: 0;
+    
 }
 
 h1,
@@ -488,6 +489,7 @@ body {
     height: 100%;
     opacity: 1;
     box-shadow: 1px 3px 7px 1px #d84a38;
+    z-index: 1;
 }
 
 .all_product_ditels:hover .view_pro_overlay {
@@ -1068,4 +1070,180 @@ body {
 }
 .row .onnorokom {
     padding-top: 50%;
+}
+
+
+
+/*  Start checkout page */
+
+.shipping {}
+.shipping .shipping_address{
+    border: 2px solid #dfdfdf;
+}
+.shipping .shipping_address .heading{
+    border-bottom: 2px solid #dfdfdf;
+    padding: 18px 26px;
+    background-color: #fafafa;
+}
+.shipping .shipping_address .heading h5{
+    color: #333333;
+    font-size: 20px;
+}
+.shipping .shipping_address .heading h5 span{
+    color: #966666;
+    font-size: 14px;
+}
+.shipping .shipping_address .Address_ditels{}
+.shipping .shipping_address .Address_ditels .picup{
+    display: flex;
+    padding: 24px 25px;
+}
+.shipping .shipping_address .Address_ditels .picup p{
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+}
+.form-check {
+    padding-left: 70px;
+    font-size:18px;
+}
+.shipping .shipping_address .Address_ditels .picup input{}
+.shipping .shipping_address .Address_ditels .picup label{}
+.shipping .shipping_address .form_address {
+    width: 100%;
+    padding: 12px 30px;
+}
+
+.shipping .shipping_address .form_address .name {
+    width: 100%;
+    padding: 8px;
+}
+.shipping .shipping_address .form_address .phone {
+    width: 45%;
+    padding: 8px;
+}
+.shipping .shipping_address .form_address .alter_phone_no {
+    width: 50%;
+    margin-left: 35px;
+    padding: 8px;
+}
+.shipping .shipping_address .form_address .cuntry {
+    width: 45%;
+    padding: 8px;
+}
+.shipping .shipping_address .form_address .city {
+    width: 50%;
+    margin-left: 35px;
+    padding: 8px;
+}
+.shipping .shipping_address .form_address .area {
+    width: 45%;
+    padding: 8px;
+}
+.shipping .shipping_address .form_address .zone {
+    width: 50%;
+    margin-left: 35px;
+    padding: 8px;
+}
+
+.shipping .shipping_address .form_address .msg {
+    width: 100%;
+}
+
+.happy_return_big {
+    padding: 20px 2px;
+    color: #978e7d;
+    font-size: 18px;
+    font-weight: 400;
+}
+.happy_return_big p{
+   
+}
+.happy_return_big img{
+    width: 18px;
+}
+.happy_return_big p img span{}
+
+.payment_method {
+    padding: 20px 35px;
+    display: flex;
+}
+.payment_item:hover {
+    cursor: pointer;
+}
+.payment_item {
+    border: 1px solid #b3b3b3;
+    width: 45%;
+    background-color: #fafafa;
+    padding: 14px 44px;
+    margin-left: 25px;
+}
+.payment_item input {
+    margin-top: 30px;   
+}
+
+.payment_item .method_name{
+    padding-left: 18px;
+}
+.payment_item .method_name img{
+    width: 45px;
+}
+.payment_item .method_name label{
+    color: #9d9387;
+}
+.rulse_ecommerce {
+    padding: 40px 48px;
+    border-bottom: 1px solid #666666;
+}
+.rulse_ecommerce p{
+    padding-bottom: 10px;
+    color: #666666;
+}
+.rulse_ecommerce .rulse_ditels{
+    padding-left: 10px;
+}
+.rulse_ecommerce .rulse_ditels span {
+    color: #666666;
+}
+
+.rulse_checkbox {
+    padding-left: 0;
+    color: #666666;
+
+
+}
+.rulse_checkbox input {
+    border: 2px solid #666666;
+}
+
+.order_btn {
+    text-align: end;
+    margin: 45px 50px
+}
+.order_btn a{
+    background-color: #ff9900;
+    padding: 24px 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.checkout_summary {
+    padding: 34px 26px;
+}
+.checkout_summary table tr td {
+    color: #777777;
+}
+.checkout_summary .total_tka{
+    font-weight: bold;
+    color: #333333;
+}
+.voucher {
+    padding: 19px 30px;
+    background-color: #f8f9fa;
+}
+.voucher  h4 {
+    color: #333333;
+    font-weight: 500;
+    font-size: 22px;
+    padding-bottom: 15px;
 }
