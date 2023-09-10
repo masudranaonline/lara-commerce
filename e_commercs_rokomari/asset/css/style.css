@@ -53,6 +53,9 @@ body {
     background-color: #f1f2f4;
 }
 
+.mt-8 {
+    margin-top: 60px;
+}
 /* end common css */
 
 /* start header top section*/
@@ -185,11 +188,11 @@ body {
 
 /* start advertising section*/
 
-.advertising {
+/* .advertising {
     height: 60px;
-}
+} */
 .advertising .ditels{
-    line-height: 60px;
+    /* line-height: 60px; */
     text-align: center;
 }
 .advertising .ditels .icon_color {
@@ -306,14 +309,17 @@ body {
 }
 .treding_category_item img {
     background-color: #cceced;
-    width: 90%;
+    width: 100%;
     height: 100%;
     padding: 22px;
+}
+.treding_category_item .link {
+    display: grid;
 }
 .treding_category_item .link a {
     background-color: #0397d3;
     color: #fff;
-    padding: 6px 56px;
+    /* padding: 6px 56px; */
 }
 .treding_category_item a:hover {
     background-color: #0376a3;
@@ -605,7 +611,10 @@ body {
     padding-right: 6px;
 }
 .footer .social .app_store{
-    display: flex;
+    /* display: flex; */
+}
+.footer .social .app_store .app_img1 {
+    /* float: left; */
 }
 
 /* end footer top css */
@@ -756,7 +765,7 @@ body {
     padding-top: 26px;
 }
 .cart .select_item .total_tk h5{
-    font-size: 18px;
+    font-size: 16px;
     color: #333333;
 }
 .cart .select_item .total_tk h5 span{
@@ -797,25 +806,26 @@ body {
     font-size: 21px;
     color: #c5c5c5;
 }
-.cart .product_ditels .item_details .product_in_de{
+.cart .product_ditels .product_in_de{
     padding-top: 40px;
     padding-left: 36px;
+    float: left;
 
 }
-.cart .product_ditels .item_details .product_in_de input{
+.cart .product_ditels .product_in_de input{
     width: 34px;
     height: 34px;
 }
-.cart .product_ditels .item_details .product_in_de button{
+.cart .product_ditels .product_in_de button{
     width: 30px;
     height: 32px;
     line-height: 26px;
 }
-.cart .product_ditels .item_details .tka{
+.cart .product_ditels .tka{
     padding-top: 40px;
-    padding-left: 112px;
+    text-align: center;
 }
-.cart .product_ditels .item_details .tka span{
+.cart .product_ditels .tka span{
     color: #333333;
     font-size: 20px;
     font-weight: 600;
@@ -1014,6 +1024,7 @@ body {
 .login .login_btn button{
     padding: 12px 60px;
     margin-right: 20px;
+    margin-top: 8px;
 
 }
 .login .login_btn button img{
@@ -1027,20 +1038,22 @@ body {
 }
 
 .login .login_mail {}
-.login .login_mail label{}
+.login .login_mail label{
+    width: 100%;
+}
 .login .login_mail label img{
     padding-right: 16px;
 }
 .login .login_mail label input{
     border: none;
-    width: 395px;
+    width: 90%;
     height: 48px;
     border-bottom: 1px solid;
 }
 .login a{
     background-color: #33c24d;
     color: white;
-    padding: 12px 196px;
+    padding: 12px 133px;
 }
 
 .customer .services {
@@ -1119,30 +1132,30 @@ body {
     padding: 8px;
 }
 .shipping .shipping_address .form_address .phone {
-    width: 45%;
+    width: 100%;
     padding: 8px;
 }
 .shipping .shipping_address .form_address .alter_phone_no {
-    width: 50%;
-    margin-left: 35px;
+    width: 100%;
+    /* margin-left: 35px; */
     padding: 8px;
 }
 .shipping .shipping_address .form_address .cuntry {
-    width: 45%;
+    width: 100%;
     padding: 8px;
 }
 .shipping .shipping_address .form_address .city {
-    width: 50%;
-    margin-left: 35px;
+    width: 100%;
+    /* margin-left: 35px; */
     padding: 8px;
 }
 .shipping .shipping_address .form_address .area {
-    width: 45%;
+    width: 100%;
     padding: 8px;
 }
 .shipping .shipping_address .form_address .zone {
-    width: 50%;
-    margin-left: 35px;
+    width: 100%;
+    /* margin-left: 35px; */
     padding: 8px;
 }
 
@@ -1165,18 +1178,18 @@ body {
 .happy_return_big p img span{}
 
 .payment_method {
-    padding: 20px 35px;
-    display: flex;
+    /* padding: 20px 35px;
+    display: flex; */
 }
 .payment_item:hover {
     cursor: pointer;
 }
 .payment_item {
     border: 1px solid #b3b3b3;
-    width: 45%;
+    /* width: 45%; */
     background-color: #fafafa;
-    padding: 14px 44px;
-    margin-left: 25px;
+    /* padding: 14px 44px; */
+    margin: 8px 11px;
 }
 .payment_item input {
     margin-top: 30px;   
@@ -1222,7 +1235,7 @@ body {
 }
 .order_btn a{
     background-color: #ff9900;
-    padding: 24px 60px;
+    padding: 10px 29px;
     color: white;
     font-size: 20px;
     border-radius: 5px;
@@ -1288,8 +1301,9 @@ body {
     display: inline-block;
 }
 .invoice .total_ammount {
-    padding-left: 76%;
+    text-align: -webkit-right;
     border-bottom: 2px solid;
+    padding-right: 12%;
 }
 .invoice .total_ammount table tbody tr td {
     font-weight: 500;
@@ -1300,8 +1314,9 @@ body {
 }
 
 .total {
-    padding-left: 76%;
+    text-align: -webkit-right;
     padding-top: 20px;
+    padding-right: 12%;
 }
 .total p {
     font-weight: bold;
