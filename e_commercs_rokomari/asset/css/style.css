@@ -63,7 +63,7 @@ body {
 .header_top {
     border-top: 1px solid #e5e8ef;
     /* border-bottom: 2px solid #e5e8ef; */
-    height: 78px;
+    /* height: 78px; */
     background-color: white;
 }
 
@@ -107,10 +107,10 @@ body {
 }
 .sign {
     border: 1px solid #33c24d;
-    padding: 4px 8px;
+    padding: 4px 12px 8px;
     color: black;
-    font-size: 20px;
-    border-radius: 4px
+    font-size: 18px;
+    border-radius: 4px;
 }
 .sign:hover {
     background-color: #33c24d;
@@ -121,7 +121,7 @@ body {
 
 /* start menuber section*/
 
-.menuber .main_menu {
+/* .menuber .main_menu {
     border-bottom: 1px solid #89c4f4;
 
 }
@@ -143,22 +143,34 @@ body {
 }
 .menuber .top_menu ul li a:hover {
     color: #03a4e0;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
 .menuber .second_menu    {
     border-bottom: 1px solid #d8dbe1;
-    height: 48px;
+    /* height: 48px; */
 } 
-.menuber .sub_menu {
+.menuber .second_menu .sub_menu {
     line-height: 48px;
 }
-.menuber .sub_menu ul {
+.menuber .second_menu .sub_menu ul {
     z-index: 1;
+    /* background-color: white; */
 }
-.menuber .sub_menu ul li {
+.menuber .second_menu .sub_menu ul li {
     float: left;
     padding: 0 22px;
 } 
-.menuber .sub_menu ul li a {
+.menuber .second_menu .sub_menu ul li a {
     color: #333333;
 } 
 .menuber .sub_menu ul li a:hover {
@@ -224,7 +236,7 @@ body {
 .title .btn_more a {
     text-align: end;
     /* display: block; */
-    padding: 5px 5px;
+    padding: 5px 5px 8px;
     color: #0397d3;
     font-size: 13px;
     border-radius: 4px;
@@ -292,6 +304,9 @@ body {
     top: 90%;
     position: absolute;
     
+}
+.pro_overlay a:hover {
+    background-color: #0379a8;
 }
 
 .product_ditels:hover .pro_overlay {
@@ -469,6 +484,9 @@ body {
     left: 25%;
     position: absolute;
 }
+.add_card_overlay a:hover {
+    background-color: #026991;
+}
 .view_pro_overlay {
     width: 100%;
     height: 0;
@@ -491,10 +509,14 @@ body {
     position: absolute;
     
 }
+.view_pro_overlay a:hover {
+    background-color: #02678f;
+}
 .all_product_ditels:hover .add_card_overlay {
     height: 100%;
     opacity: 1;
-    box-shadow: 1px 3px 7px 1px #d84a38;
+    /* box-shadow: 1px 3px 7px 1px #d84a38; */
+    box-shadow: 0px 0px 2px 1px #fec3bb;
     z-index: 1;
 }
 
