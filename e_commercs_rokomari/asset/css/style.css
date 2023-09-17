@@ -163,7 +163,7 @@ body {
     line-height: 48px;
 }
 .menuber .second_menu .sub_menu ul {
-    z-index: 1;
+    z-index: 4;
     /* background-color: white; */
 }
 .menuber .second_menu .sub_menu ul li {
