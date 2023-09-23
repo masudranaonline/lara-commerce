@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product cart page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    <!-- header_top section -->
+    <div class="header_top">
+        <div class="container container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <a href="index.html"><img class="img-fluid" src="asset/img/rokomari_logo.png" alt=""></a>
+                </div>
+                <div class="col-md-6 ">
+                    <form class="d-flex pt-3">
+                        <select class="selector_product" name="product" id="">
+                            <option value="All">All</option>
+                            <option value="Book">Book</option>
+                            <option value="Superstore">Superstore</option>
+                        </select>
+                        <input class="form-control control_class" type="search" placeholder="Search" aria-label="Search">
+                        <a href="" class="btn btn-outline-success pl-1 border_color"><i class="fa fa-search"></i></a>
+                      </form>
+                </div>
+                <div class="col-md-3 text-end top">
+                    <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                    <a href="" class="sign">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end header_top section -->
+    <!-- start menuber section -->
+    <div class="menuber">
+        <div class="second_menu">
+            <div class="sub_menu">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container">
+                      <button class="navbar-toggler" style="margin: 8px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#">বই</a></li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">লেখক</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">হুমায়ূন আহমেদ</a></li>
+                                    <li><a class="dropdown-item" href="#"> মুহম্মদ জাফর ইকবাল</a></li>
+                                    <li><a class="dropdown-item" href="#">সমরেশ মজুমদার</a></li>
+                                    <li><a class="dropdown-item" href="#">রবীন্দ্রনাথ ঠাকুর</a></li>
+                                    <li><a class="dropdown-item" href="#">সুনীল গঙ্গোপাধ্যায়</a></li>
+                                    <li><a class="dropdown-item" href="#">আনিসুল হক</a></li>
+                                    <li><a class="dropdown-item" href="#">শীর্ষেন্দু মুখোপাধ্যায়</a></li>
+                                    <li><a class="dropdown-item" href="#">সত্যজিৎ রায়</a></li>
+                                    <li><a class="dropdown-item" href="#">আহমদ ছফা</a></li>
+                                    <li><a class="dropdown-item" href="#">বিভূতিভূষণ বন্দ্যোপাধ্যায়</a></li>
+                                    <li><a class="dropdown-item" href="#">সৈয়দ শামসুল হক</a></li>
+                                    <li><a class="dropdown-item" href="#">সাদাত হোসাইন</a></li>
+                                    <li><a class="dropdown-item" href="#">তামিম শাহরিয়ার সুবিন</a></li>
+                                    <li><a class="dropdown-item" href="#">কাজী নজরুল ইসলাম</a></li>
+                                    <li><a class="dropdown-item" href="#">হুমায়ুন আজাদ</a></li>
+                                    <li><a class="dropdown-item" href="#">জহির রায়হান</a></li>
+                                    <li><a class="dropdown-item" href="#">ড্যান ব্রাউন</a></li>
+                                    <li><a class="dropdown-item" href="#">চেতন ভগত</a></li>
+                                    <li><a class="dropdown-item" href="#">রকিব হাসান</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">ক্যাটাগরি সমূহ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">ইলেক্ট্রনিক্স</a></li>
+                                    <li><a class="dropdown-item" href="#">মনিহারি পণ্য</a></li>
+                                    <li><a class="dropdown-item" href="#">কিডস জোন</a></li>
+                                    <li><a class="dropdown-item" href="#">গিফট ফাইন্ডার</a></li>
+                                    <li><a class="dropdown-item" href="#">প্রাতিষ্ঠানিক অর্ডার</a></li>
+                                    <li><a class="dropdown-item" href="#">আনিসুল হক</a></li>
+                                    <li><a class="dropdown-item" href="#">শীর্ষেন্দু মুখোপাধ্যায়</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">প্রকাশনী</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">ই-বুক</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">স্টকের প্রোডাক্ট সমূহ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">নতুন পণ্যসমূহ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">ইসলামি বই</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+     <!-- end menuber section -->
+        <!-- start cart section -->
+
+        <div class="cart pt-4 pb-4">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-md-2"></div> -->
+                    <div class="col-md-8">
+                        <div class="select_item product_bg shadow">
+                            <div class="left_select_item">
+                                <input type="checkbox">
+                                <label for="">Select All (1 Item)</label>
+                            </div>
+                            <div class="total_tk">
+                                <h5>your total: <span> 395 Tk</span></h5>
+                            </div>
+                        </div>
+                        <div class="order_product_ditels mt-5 pb-5 product_bg shadow">
+                            <div class="product_ditels ">
+                                <div class="row">
+                                <div class="col-md-6">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                        </div>
+                                        <div class="item_details">
+                                            <img src="asset/img/Civics_1st_papernews-Professor_Dr_Md_Mojammed_Haque-73be7-70437.jpg" alt="">
+                                            <div class="sub_per_name">
+                                                <h6>পৌরনীতি ও সুশাসন ১ম প্রত্র (একাদশ-দ্বাদশ)</h6>
+                                                <p>প্রফেসর ড. মোঃ মোজাম্মেল হক</p>
+                                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                                            </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="product_in_de">
+                                        <button><i class="fa-solid fa-minus"></i></button>
+                                        <input type="text" placeholder="1">
+                                        <button><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <div class="tka">
+                                        <span>Tk. 395</span>
+                                    </div>
+                                </div>
+                                
+                                    
+                                </div>
+                        </div>
+                        <div class="place_order pt-4">
+                            <button type="button" class="btn btn-primary btn-lg">Order as a Gift</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Place Order</button>            
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="check_sidebar product_bg shadow">
+                            <div class="sidebar_details">
+                                <img src="asset/img/cash-on.svg" alt="">
+                                <span>Cash on Delivery Available</span>
+                            </div>
+                            <div class="sidebar_details">
+                                <img src="asset/img/cash-on.svg" alt="">
+                                <span>7 Days Replacement Policy</span>
+                            </div>
+                            <div class="sidebar_details">
+                                <img src="asset/img/cash-on.svg" alt="">
+                                <span>100% Money Back Guarantee</span>
+                            </div>
+                            <div class="sidebar_details">
+                                <img src="asset/img/cash-on.svg" alt="">
+                                <span>Purchase & Earn Points</span>
+                            </div>
+                            <div class="sidebar_details">
+                                <img src="asset/img/cash-on.svg" alt="">
+                                <span>100% Original Product</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" ></script>
+   
+</body>
+</html>
