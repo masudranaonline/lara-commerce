@@ -99,7 +99,25 @@ Route::get('/payment', function () {
 Route::get('/payment_add', function () {
     return view('admin.payment.create');
 });
+Route::get('/payment_edit', function () {
+    return view('admin.payment.edit');
+});
+Route::get('/payment_details', function () {
+    return view('admin.payment.details');
+});
 
+Route::get('/refand', function () {
+    return view('admin.refand.index');
+});
+Route::get('/refand_add', function () {
+    return view('admin.refand.create');
+});
+Route::get('/refand_details', function () {
+    return view('admin.refand.details');
+});
+Route::get('/refand_edit', function () {
+    return view('admin.refand.edit');
+});
 
 
 
