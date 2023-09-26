@@ -1,0 +1,15 @@
+[2023-09-19 02:42:45] local.ERROR: There are no commands defined in the "meke" namespace.
+
+Did you mean this?
+    make {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"meke\" namespace.
+
+Did you mean this?
+    make at D:\\Intern Project\\ecommerce\\vendor\\symfony\\console\\Application.php:657)
+[stacktrace]
+#0 D:\\Intern Project\\ecommerce\\vendor\\symfony\\console\\Application.php(708): Symfony\\Component\\Console\\Application->findNamespace('meke')
+#1 D:\\Intern Project\\ecommerce\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->find('meke:migration')
+#2 D:\\Intern Project\\ecommerce\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\Intern Project\\ecommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\Intern Project\\ecommerce\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
