@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('admin.home');
 // });
+
 Route::get('/customer', function () {
     return view('admin.customer.index');
 });
@@ -119,7 +120,7 @@ Route::get('/refand_edit', function () {
     return view('admin.refand.edit');
 });
 
-
+//forntend view
 
 Route::get('/', function () {
     return view('frontend.home');
