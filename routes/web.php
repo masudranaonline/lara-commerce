@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('admin.home');
-});
+// Route::get('/', function () {
+//     return view('admin.home');
+// });
 Route::get('/customer', function () {
     return view('admin.customer.index');
 });
@@ -121,27 +121,27 @@ Route::get('/refand_edit', function () {
 
 
 
-// Route::get('/', function () {
-//     return view('frontend.home');
-// });
+Route::get('/', function () {
+    return view('frontend.home');
+});
 
-// Route::get('/cart', function () {
-//     return view('frontend.cart');
-// });
+Route::get('/cart', function () {
+    return view('frontend.cart');
+});
 
-// Route::get('/product_list', function () {
-//     return view('frontend.product_list');
-// });
-// Route::get('/checkout', function () {
-//     return view('frontend.checkout');
-// });
-// Route::get('/details', function () {
-//     return view('frontend.details');
-// });
-// Route::get('/invoice', function () {
-//     return view('frontend.invoice');
-// });
-// Route::get('/login', function () {
-//     return view('frontend.login');
-// });
+Route::get('/product_list', function () {
+    return view('frontend.product_list');
+});
+Route::get('/checkout', function () {
+    return view('frontend.checkout');
+});
+Route::get('/details', function () {
+    return view('frontend.details');
+});
+Route::get('/invoice', function () {
+    return view('frontend.invoice');
+});
+Route::get('/login', function () {
+    return view('frontend.login');
+});
 

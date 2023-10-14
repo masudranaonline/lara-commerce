@@ -301,8 +301,10 @@ body {
     color: white;
     padding: 5px 55px;
     display: block;
-    top: 90%;
+    top: 100%;
     position: absolute;
+    font-size: 10px;
+    width: 100%;
     
 }
 .pro_overlay a:hover {
@@ -483,6 +485,8 @@ body {
     top: 50%;
     left: 25%;
     position: absolute;
+    right: 25%;
+    font-size: 12px;
 }
 .add_card_overlay a:hover {
     background-color: #026991;
@@ -507,6 +511,8 @@ body {
     display: block;
     top: 100%;
     position: absolute;
+    font-size: 10px;
+    width: 100%;
     
 }
 .view_pro_overlay a:hover {
