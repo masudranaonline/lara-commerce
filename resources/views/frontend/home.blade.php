@@ -65,7 +65,7 @@
             </div>
             <div class="product_list pt-3">
                 <div class="row">
-                    <div class="col-md-2 col-sm-3">
+                    <div class="col-md-2 col-sm-3 pb-3">
                         <div class="product_ditels py-2">
                             <img class="img-fluid" src="/frontend/asset/img/bag.jpg" alt="">
                             <h3>Foska Waterproof Kids Fashion Cartoon School Bag</h3>
@@ -393,7 +393,7 @@
             </div>
             <div class="product_list pt-3">
                 <div class="row">
-                    <div class="col-md-2 col-sm-3">
+                    <div class="col-md-2 col-sm-3 pb-4">
                         <div class="product_ditels py-2">
                             <img class="img-fluid" src="/frontend/asset/img/Nofser_Biruddhe_Lorai-Mahmud_Bin_Noor-885a9-217630.jpg" alt="">
                             <h3>নফসের বিরুদ্ধে লড়াই </h3>

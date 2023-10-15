@@ -16,15 +16,16 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="product_add.html">
-              <i class="bi bi-circle"></i><span>All product</span>
+            <a href="/admin-panel/product/create">
+              <i class="bi bi-circle"></i><span>Add Product</span>
             </a>
           </li>
           <li>
-            <a href="product_list.html">
-              <i class="bi bi-circle"></i><span>Product list</span>
+            <a href="/admin-panel/product">
+              <i class="bi bi-circle"></i><span>All product</span>
             </a>
           </li>
+         
          
         </ul>
       </li><!-- End Components Nav -->
@@ -35,12 +36,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="customer_add.html">
+            <a href="/admin-panel/customer/create">
               <i class="bi bi-circle"></i><span>Add Customer</span>
             </a>
           </li>
           <li>
-            <a href="customer_list.html">
+            <a href="/admin-panel/customer">
               <i class="bi bi-circle"></i><span>Customer List</span>
             </a>
           </li>
@@ -53,7 +54,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="order_list.html">
+            <a href="/admin-panel/order">
               <i class="bi bi-circle"></i><span>Order list</span>
             </a>
           </li>
@@ -66,12 +67,12 @@
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="payment_add.html">
+            <a href="/admin-panel/payment/create">
               <i class="bi bi-circle"></i><span>Add Payment</span>
             </a>
           </li>
           <li>
-            <a href="payment_list.html">
+            <a href="/admin-panel/payment">
               <i class="bi bi-circle"></i><span>List Payment</span>
             </a>
           </li>
@@ -84,12 +85,12 @@
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="category_add.html">
+            <a href="/admin-panel/category/create">
               <i class="bi bi-circle"></i><span>Add Category</span>
             </a>
           </li>
           <li>
-            <a href="category_list.html">
+            <a href="/admin-panel/category">
               <i class="bi bi-circle"></i><span>Category List</span>
             </a>
           </li>
@@ -102,12 +103,12 @@
         </a>
         <ul id="vendor-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="vendor_add.html">
+            <a href="/admin-panel/vendor/create">
               <i class="bi bi-circle"></i><span>Add Vendor</span>
             </a>
           </li>
           <li>
-            <a href="vendor_list.html">
+            <a href="/admin-panel/vendor">
               <i class="bi bi-circle"></i><span>List Vendor</span>
             </a>
           </li>
@@ -120,13 +121,13 @@
         </a>
         <ul id="refand-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="refand_add.html">
-              <i class="bi bi-circle"></i><span>Add Refand</span>
+            <a href="/admin-panel/refund/create">
+              <i class="bi bi-circle"></i><span>Add Refund</span>
             </a>
           </li>
           <li>
-            <a href="refand_list.html">
-              <i class="bi bi-circle"></i><span>View Refand</span>
+            <a href="/admin-panel/refund">
+              <i class="bi bi-circle"></i><span>View Refund</span>
             </a>
           </li>
         </ul>
@@ -137,12 +138,12 @@
         </a>
         <ul id="cart-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="cart_add.html">
+            <a href="/admin-panel/cart/create">
               <i class="bi bi-circle"></i><span>Add Cart</span>
             </a>
           </li>
           <li>
-            <a href="cart_list.html">
+            <a href="/admin-panel/cart">
               <i class="bi bi-circle"></i><span>Cart List</span>
             </a>
           </li>

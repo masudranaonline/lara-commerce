@@ -299,12 +299,13 @@ body {
 .pro_overlay a {
     background-color: #0397d3;
     color: white;
-    padding: 5px 55px;
+    padding: 10px;
     display: block;
     top: 100%;
     position: absolute;
-    font-size: 10px;
+    font-size: 12px;
     width: 100%;
+    font-weight: 600;
     
 }
 .pro_overlay a:hover {
@@ -480,7 +481,7 @@ body {
 .add_card_overlay a {
     background-color: #0397d3;
     color: white;
-    padding: 5px 10px;
+    padding: 5px;
     display: block;
     top: 50%;
     left: 25%;
@@ -507,13 +508,13 @@ body {
 .view_pro_overlay a {
     background-color: #0397d3;
     color: white;
-    padding: 5px 55px;
+    padding: 10px;
     display: block;
     top: 100%;
     position: absolute;
-    font-size: 10px;
     width: 100%;
-    
+    font-size: 12px;
+    font-weight: 600;
 }
 .view_pro_overlay a:hover {
     background-color: #02678f;

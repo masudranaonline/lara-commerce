@@ -1,6 +1,20 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\ProductlistController;
+
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\VendorController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\RefundController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,134 +29,103 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::get('/', function () {
-//     return view('admin.home');
+Route::get('/', [FrontendController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/cart', [CartController::class, 'index']);
+Route::get('/checkout', [CheckoutController::class, 'index']);
+Route::get('/invoice', [InvoiceController::class, 'index']);
+Route::get('/products', [ProductlistController::class, 'index']);
+Route::get('/products/show/{id}', [ProductlistController::class, 'show']);
+
+
+
+// Route::get('/cart', function () {
+//     return view('admin.cart.index');
+// });
+// Route::get('/cart_details', function () {
+//     return view('admin.cart.details');
+// });
+// Route::get('/cart_edit', function () {
+//     return view('admin.cart.edit');
 // });
 
-Route::get('/customer', function () {
-    return view('admin.customer.index');
-});
-Route::get('/customer_add', function () {
-    return view('admin.customer.create');
-});
-Route::get('/customer_edit', function () {
-    return view('admin.customer.edit');
-});
-Route::get('/customer_details', function () {
-    return view('admin.customer.details');
-});
 
 
+Route::group(['prefix' => 'admin-panel',], function(){
+    Route::get('/', [AdminController::class, 'index']);
 
-Route::get('/product', function () {
-    return view('admin.product.index');
-});
+    Route::group(['prefix' => 'customer'], function(){
+        Route::get('/', [CustomerController::class, 'index']);
+        Route::get('create', [CustomerController::class, 'create']);
+        Route::post('store', [CustomerController::class, 'store']);
+        Route::get('edit/{id}', [CustomerController::class, 'edit']);
+        Route::post('update/{id}', [CustomerController::class, 'update']);
+        Route::get('show/{id}', [CustomerController::class, 'show']);
+        Route::post('destroy/{id}', [CustomerController::class, 'destroy']);
+    });
 
-Route::get('/product_create', function () {
-    return view('admin.product.create');
-});
-
-Route::get('/product_edit', function () {
-    return view('admin.product.edit');
-});
-
-Route::get('/product_details', function () {
-    return view('admin.product.details');
-});
-
-Route::get('/order', function () {
-    return view('admin.order.index');
-});
-Route::get('/order_edit', function () {
-    return view('admin.order.edit');
-});
-Route::get('/order_details', function () {
-    return view('admin.order.details');
-});
+    // Route::resource('customer', 'CustomerController');
 
 
-Route::get('/vendor', function () {
-    return view('admin.vendor.index');
-});
-Route::get('/vendor_add', function () {
-    return view('admin.vendor.create');
-});
-Route::get('/vendor_edit', function () {
-    return view('admin.vendor.edit');
-});
+    Route::group(['prefix' => 'vendor'], function(){
+        Route::get('/', [VendorController::class, 'index']);
+        Route::get('create', [VendorController::class, 'create']);
+        Route::post('store', [VendorController::class, 'store']);
+        Route::get('edit/{id}', [VendorController::class, 'edit']);
+        Route::post('update/{id}', [VendorController::class, 'update']);
+        Route::get('show/{id}', [VendorController::class, 'show']);
+        Route::post('destroy/{id}', [VendorController::class, 'destroy']);
+    });
+    
 
-Route::get('/category', function () {
-    return view('admin.category.index');
-});
-Route::get('/category_add', function () {
-    return view('admin.category.create');
-});
-Route::get('/category_details', function () {
-    return view('admin.category.details');
-});
-Route::get('/category_edit', function () {
-    return view('admin.category.edit');
-});
+    Route::group(['prefix' => 'product'], function(){
+        Route::get('/', [ProductController::class, 'index']);
+        Route::get('create', [ProductController::class, 'create']);
+        Route::post('store', [ProductController::class, 'store']);
+        Route::get('edit/{id}', [ProductController::class, 'edit']);
+        Route::post('update/{id}', [ProductController::class, 'update']);
+        Route::get('show/{id}', [ProductController::class, 'show']);
+        Route::post('destroy/{id}', [ProductController::class, 'destroy']);
+    });
 
-Route::get('/cart', function () {
-    return view('admin.cart.index');
-});
-Route::get('/cart_details', function () {
-    return view('admin.cart.details');
-});
-Route::get('/cart_edit', function () {
-    return view('admin.cart.edit');
-});
+    Route::group(['prefix' => 'category'], function(){
+        Route::get('/', [CategoryController::class, 'index']);
+        Route::get('create', [CategoryController::class, 'create']);
+        Route::post('store', [CategoryController::class, 'store']);
+        Route::get('edit/{id}', [CategoryController::class, 'edit']);
+        Route::post('update/{id}', [CategoryController::class, 'update']);
+        Route::get('show/{id}', [CategoryController::class, 'show']);
+        Route::post('destroy/{id}', [CategoryController::class, 'destroy']);
+    });
 
-Route::get('/payment', function () {
-    return view('admin.payment.index');
-});
-Route::get('/payment_add', function () {
-    return view('admin.payment.create');
-});
-Route::get('/payment_edit', function () {
-    return view('admin.payment.edit');
-});
-Route::get('/payment_details', function () {
-    return view('admin.payment.details');
-});
 
-Route::get('/refand', function () {
-    return view('admin.refand.index');
-});
-Route::get('/refand_add', function () {
-    return view('admin.refand.create');
-});
-Route::get('/refand_details', function () {
-    return view('admin.refand.details');
-});
-Route::get('/refand_edit', function () {
-    return view('admin.refand.edit');
-});
+    Route::group(['prefix' => 'order'], function(){
+        Route::get('/', [OrderController::class, 'index']);
+        Route::post('store', [OrderController::class, 'store']);
+        Route::get('edit/{id}', [OrderController::class, 'edit']);
+        Route::post('update/{id}', [OrderController::class, 'update']);
+        Route::get('show/{id}', [OrderController::class, 'show']);
+        Route::post('destroy/{id}', [OrderController::class, 'destroy']);
+    });
 
-//forntend view
+    Route::group(['prefix' => 'refund'], function(){
+        Route::get('/', [RefundController::class, 'index']);
+        Route::get('create', [RefundController::class, 'create']);
+        Route::post('store', [RefundController::class, 'store']);
+        Route::get('edit/{id}', [RefundController::class, 'edit']);
+        Route::post('update/{id}', [RefundController::class, 'update']);
+        Route::get('show/{id}', [RefundController::class, 'show']);
+        Route::post('destroy/{id}', [RefundController::class, 'destroy']);
+    });
 
-Route::get('/', function () {
-    return view('frontend.home');
+    Route::group(['prefix' => 'payment'], function(){
+        Route::get('/', [PaymentController::class, 'index']);
+        Route::get('create', [PaymentController::class, 'create']);
+        Route::post('store', [PaymentController::class, 'store']);
+        Route::get('edit/{id}', [PaymentController::class, 'edit']);
+        Route::post('update/{id}', [PaymentController::class, 'update']);
+        Route::get('show/{id}', [PaymentController::class, 'show']);
+        Route::post('destroy/{id}', [PaymentController::class, 'destroy']);
+    });
+    
 });
-
-Route::get('/cart', function () {
-    return view('frontend.cart');
-});
-
-Route::get('/product_list', function () {
-    return view('frontend.product_list');
-});
-Route::get('/checkout', function () {
-    return view('frontend.checkout');
-});
-Route::get('/details', function () {
-    return view('frontend.details');
-});
-Route::get('/invoice', function () {
-    return view('frontend.invoice');
-});
-Route::get('/login', function () {
-    return view('frontend.login');
-});
-
