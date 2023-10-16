@@ -19,11 +19,15 @@
               </tr>
             </thead>
             <tbody>
+                @php $serial = 0; @endphp
+                @foreach ( $products as $product)
+                @php $serial++ @endphp
+
               <tr>
-                <th scope="row">1</th>
-                <td>Brandon Jacob</td>
-                <td>Designer</td>
-                <td>28</td>
+                <th scope="row">{{ $serial }}</th>
+                <td>{{ $product->product_name }}</td>
+                <td>{{ $product->sales_price }}</td>
+                <td>{{ $product->minimum_quantity  }}</td>
                 <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
                 <td>
                   <a href="product_details.html" class="btn btn-info">view details</a>
@@ -31,38 +35,8 @@
                   <a href="#" class="btn btn-danger">Delete</a>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Bridie Kessler</td>
-                <td>Developer</td>
-                <td>35</td>
-                <td>2014-12-05</td>
-                <td>Edit</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Ashleigh Langosh</td>
-                <td>Finance</td>
-                <td>45</td>
-                <td>2011-08-12</td>
-                <td>Edit</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Angus Grady</td>
-                <td>HR</td>
-                <td>34</td>
-                <td>2012-06-11</td>
-                <td>Edit</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Raheem Lehner</td>
-                <td>Dynamic Division Officer</td>
-                <td>47</td>
-                <td>2011-04-19</td>
-                <td>Edit</td>
-              </tr>
+              @endforeach
+
             </tbody>
           </table>
           <!-- End Table with stripped rows -->
@@ -71,4 +45,4 @@
       </div>
   </main><!-- End #main -->
 @endsection
-  
+

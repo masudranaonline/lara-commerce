@@ -76,7 +76,7 @@ Route::group(['prefix' => 'admin-panel',], function(){
         Route::get('show/{id}', [VendorController::class, 'show']);
         Route::post('destroy/{id}', [VendorController::class, 'destroy']);
     });
-    
+
 
     Route::group(['prefix' => 'product'], function(){
         Route::get('/', [ProductController::class, 'index']);
@@ -127,5 +127,5 @@ Route::group(['prefix' => 'admin-panel',], function(){
         Route::get('show/{id}', [PaymentController::class, 'show']);
         Route::post('destroy/{id}', [PaymentController::class, 'destroy']);
     });
-    
+
 });
