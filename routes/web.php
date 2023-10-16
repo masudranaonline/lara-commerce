@@ -1,4 +1,6 @@
 <?php
+
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LoginController;
@@ -15,6 +17,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RefundController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\AdminCartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,6 +129,15 @@ Route::group(['prefix' => 'admin-panel',], function(){
         Route::post('update/{id}', [PaymentController::class, 'update']);
         Route::get('show/{id}', [PaymentController::class, 'show']);
         Route::post('destroy/{id}', [PaymentController::class, 'destroy']);
+    });
+
+    Route::group(['prefix' => 'cart'], function(){
+        Route::get('/', [AdminCartController::class, 'index']);
+        Route::post('store', [AdminCartController::class, 'store']);
+        Route::get('edit/{id}', [AdminCartController::class, 'edit']);
+        Route::post('update/{id}', [AdminCartController::class, 'update']);
+        Route::get('show/{id}', [AdminCartController::class, 'show']);
+        Route::post('destroy/{id}', [AdminCartController::class, 'destroy']);
     });
     
 });
