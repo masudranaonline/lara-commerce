@@ -79,7 +79,7 @@ Route::group(['prefix' => 'admin-panel',], function(){
         Route::get('show/{id}', [VendorController::class, 'show']);
         Route::post('destroy/{id}', [VendorController::class, 'destroy']);
     });
-    
+
 
     Route::group(['prefix' => 'product'], function(){
         Route::get('/', [ProductController::class, 'index']);
@@ -131,13 +131,5 @@ Route::group(['prefix' => 'admin-panel',], function(){
         Route::post('destroy/{id}', [PaymentController::class, 'destroy']);
     });
 
-    Route::group(['prefix' => 'cart'], function(){
-        Route::get('/', [AdminCartController::class, 'index']);
-        Route::post('store', [AdminCartController::class, 'store']);
-        Route::get('edit/{id}', [AdminCartController::class, 'edit']);
-        Route::post('update/{id}', [AdminCartController::class, 'update']);
-        Route::get('show/{id}', [AdminCartController::class, 'show']);
-        Route::post('destroy/{id}', [AdminCartController::class, 'destroy']);
-    });
-    
 });
+

@@ -21,12 +21,12 @@ class product extends Model
         'quantity',
         'minimum_quantity',
         'sizes',
-        'wigth',
+        'weight',
         'material',
         'color_family',
         'warranty',
-        'shippint_cost',
+        'shipping_cost',
         'product_location',
-        'description',
+        'descriptions',
     ];
 }

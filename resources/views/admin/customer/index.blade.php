@@ -20,50 +20,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Brandon Jacob</td>
-                <td>01975483170</td>
-                <td>masudrana@gmail.com</td>
-                <td><img class="img-fluid" src="/admin/assets/img/pic.jpg" style="height: 44px; width: 45px;" alt=""></td>
-                <td>
-                  <a href="customer_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Bridie Kessler</td>
-                <td>Developer</td>
-                <td>35</td>
-                <td>2014-12-05</td>
-                <td>Edit</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Ashleigh Langosh</td>
-                <td>Finance</td>
-                <td>45</td>
-                <td>2011-08-12</td>
-                <td>Edit</td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Angus Grady</td>
-                <td>HR</td>
-                <td>34</td>
-                <td>2012-06-11</td>
-                <td>Edit</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Raheem Lehner</td>
-                <td>Dynamic Division Officer</td>
-                <td>47</td>
-                <td>2011-04-19</td>
-                <td>Edit</td>
-              </tr>
+              @php $serial = 0; @endphp
+              @foreach($customers as $customer) 
+                @php $serial ++; @endphp
+                <tr>
+                  <th scope="row">{{ $serial }}</th>
+                  <td>{{ $customer->customer_name }}</td>
+                  <td>{{$customer->mobile_no }}</td>
+                  <td>{{ $customer->email }}</td>
+                  <td><img class="img-fluid" src="/admin/assets/img/pic.jpg" style="height: 44px; width: 45px;" alt=""></td>
+                  <td>
+                    <a href="customer_details.html" class="btn btn-info">view details</a>
+                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                  </td>
+                </tr>
+             @endforeach
             </tbody>
           </table>
           <!-- End Table with stripped rows -->

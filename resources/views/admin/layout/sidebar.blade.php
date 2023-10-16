@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="/admin-panel">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -137,11 +137,11 @@
           <i class="bi bi-gem"></i><span>Cart</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="cart-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
+          {{-- <li>
             <a href="/admin-panel/cart/create">
               <i class="bi bi-circle"></i><span>Add Cart</span>
             </a>
-          </li>
+          </li> --}}
           <li>
             <a href="/admin-panel/cart">
               <i class="bi bi-circle"></i><span>Cart List</span>

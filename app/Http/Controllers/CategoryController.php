@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\category;
 
 class CategoryController extends Controller
 {
@@ -11,7 +12,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.category.index');
+        $categories = category::all();
+        return view('admin.category.index', compact('categories'));
     }
 
     /**
@@ -27,7 +29,29 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new category();
+
+        $category->product_name     = $request->product_name;
+        $category->category_name    = $request->category_name;
+        $category->product_name     = $request->product_name;
+        $category->image            = $request->image;
+        $category->cost_price       = $request->cost_price;
+        $category->sales_price      = $request->sales_price;
+        $category->discount         = $request->discount;
+        $category->brand_name       = $request->brand_name;
+        $category->quantity         = $request->quantity;
+        $category->color_family     = $request->color_family;
+        $category->warranty         = $request->warranty;
+        $category->shipping_cost    = $request->shipping_cost;
+        $category->product_location = $request->product_location;
+        $category->description      = $request->description;
+
+        try {
+            $category->save();
+            return back();
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

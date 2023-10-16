@@ -13,7 +13,7 @@ class payment extends Model
         'payment_method',
         'payment_number',
         'account_holder_name',
-        'account_number',
+        'account_no',
         'branch_name',  
     ];
 }

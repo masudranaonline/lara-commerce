@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\vendor;
 use Illuminate\Http\Request;
 
 class VendorController extends Controller
@@ -11,7 +12,8 @@ class VendorController extends Controller
      */
     public function index()
     {
-        return view('admin.vendor.index');
+        $vendors = vendor::all();
+        return view('admin.vendor.index', compact('vendors'));
     }
 
     /**
@@ -27,7 +29,22 @@ class VendorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vendor = new vendor();
+
+        $vendor->vendor_name  = $request->vendor_name;
+        $vendor->company_name = $request->company_name;
+        $vendor->phone        = $request->phone;
+        $vendor->email        = $request->email;
+        $vendor->image        = $request->image;
+
+       
+
+        try {
+             $vendor->save();
+             return back()->with('success', 'Vender store Successfully');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**

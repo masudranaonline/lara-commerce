@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\payment;
 use Illuminate\Http\Request;
 
-class PaymentController extends Controller
+class AdminCartController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $payments = payment::all();
-        return view('admin.payment.index', compact('payments'));
+        return view('admin.cart.index');
     }
 
     /**
@@ -21,7 +19,7 @@ class PaymentController extends Controller
      */
     public function create()
     {
-        return view('admin.payment.create');
+        //
     }
 
     /**
@@ -29,21 +27,7 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        $payment = new payment();
-
-        $payment->payment_method        = $request->payment_method;
-        $payment->payment_number        = $request->payment_number;
-        $payment->account_holder_name   = $request->account_holder_name;
-        $payment->account_no            = $request->account_no;
-        $payment->branch_name           = $request->branch_name;
-
-
-        try {
-            $payment->save();
-            return back();
-        } catch (\Throwable $th) {
-            throw $th;
-        }
+        //
     }
 
     /**
@@ -51,7 +35,7 @@ class PaymentController extends Controller
      */
     public function show(string $id)
     {
-        return view('admin.payment.details');
+        //
     }
 
     /**
@@ -59,7 +43,7 @@ class PaymentController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.payment.edit');
+        //
     }
 
     /**

@@ -19,12 +19,15 @@
               </tr>
             </thead>
             <tbody>
+              @php $serial =0; @endphp
+              @foreach($vendors as $vendor)
+              @php $serial ++; @endphp
               <tr>
-                <th scope="row">1</th>
-                <td>Brandon Jacob</td>
-                <td>Designer</td>
-                <td>28</td>
-                <td>vendor@gmail.com</td>
+                <th scope="row">{{ $serial }}</th>
+                <td>{{ $vendor->vendor_name}}</td>
+                <td>{{ $vendor->company_name}}</td>
+                <td>{{ $vendor->phone}}</td>
+                <td>{{ $vendor->email }}</td>
                 <td><img class="img-fluid" src="/admin/assets/img/pic.jpg" style="height: 44px; width: 45px;" alt=""></td>
                 <td>
                   <a href="vendor_details.html" class="btn btn-info">view details</a>
@@ -32,7 +35,7 @@
                   <a href="#" class="btn btn-danger">Delete</a>
                 </td>
               </tr>
-             
+              @endforeach
             </tbody>
           </table>
           <!-- End Table with stripped rows -->
