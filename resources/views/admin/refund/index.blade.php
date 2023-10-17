@@ -20,49 +20,24 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>5484316544</td>
-                <td>Mobele</td>
-                <td>Ariful Islam</td>
-                <td>Masud Rana</td>
-                <td>5000</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>
-                  <a href="refand_ditels.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>5484316544</td>
-                <td>Mobele</td>
-                <td>Ariful Islam</td>
-                <td>Masud Rana</td>
-                <td>5000</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>
-                  <a href="product_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>5484316544</td>
-                <td>Mobele</td>
-                <td>Ariful Islam</td>
-                <td>Masud Rana</td>
-                <td>5000</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>
-                  <a href="product_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-             
+              @php $serial = 0; @endphp
+              @foreach($refunds as $refund)
+                @php $serial ++; @endphp
+                <tr>
+                  <th scope="row">{{ $serial }}</th>
+                  <td>{{ $refund->refund_number }}</td>
+                  <td>{{ $refund->product_name }}</td>
+                  <td>{{ $refund->customer_name }}</td>
+                  <td>{{ $refund->vendor_name }}</td>
+                  <td>{{ $refund->refund_amount }}</td>
+                  <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
+                  <td>
+                    <a href="refand_ditels.html" class="btn btn-info">view details</a>
+                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                  </td>
+                </tr>
+              @endforeach
             </tbody>
           </table>
           <!-- End Table with stripped rows -->

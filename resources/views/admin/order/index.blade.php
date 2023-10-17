@@ -20,62 +20,25 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <th>10001</th>
-                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
-                <td>1</td>
-                <td>250</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>0</td>
-                <td>
-                  <a href="order_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <th>10001</th>
-                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
-                <td>1</td>
-                <td>250</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>0</td>
-                <td>
-                  <a href="order_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <th>10001</th>
-                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
-                <td>1</td>
-                <td>250</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>0</td>
-                <td>
-                  <a href="order_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <th>10001</th>
-                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
-                <td>1</td>
-                <td>250</td>
-                <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
-                <td>0</td>
-                <td>
-                  <a href="order_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
+              @php $serial = 0; @endphp
+              @foreach($orders as $order)
+                @php $serial ++; @endphp
+                <tr>
+                  <td scope="row">{{ $serial }}</td>
+                  <td>{{ $order->order_number }}</td>
+                  <td>{{ $order->product_name }}</td>
+                  <td>{{ $order->quantity }}</td>
+                  <td>{{ $order->total_amount }}</td>
+
+                  <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
+                  <td>0</td>
+                  <td>
+                    <a href="order_details.html" class="btn btn-info">view details</a>
+                    <a href="#" class="btn btn-warning">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                  </td>
+                </tr>
+              @endforeach
             </tbody>
           </table>
           <!-- End Table with stripped rows -->
