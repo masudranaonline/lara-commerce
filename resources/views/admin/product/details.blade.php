@@ -12,7 +12,7 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-3">Product name</td>
-                                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
+                                <td>{{ $product->product_name }}</td>
                             </tr>
                             <tr>
                                 <td>Product Title</td>
@@ -92,6 +92,5 @@
       </div>
   </main><!-- End #main -->
 @endsection
-  
 
-  
+

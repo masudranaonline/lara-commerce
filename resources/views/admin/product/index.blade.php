@@ -30,9 +30,12 @@
                 <td>{{ $product->minimum_quantity  }}</td>
                 <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
                 <td>
-                  <a href="product_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
+                  <a href="/admin-panel/product/show/{{ $product->id }}" class="btn btn-info">view details</a>
+                  <a href="/admin-panel/product/edit/{{ $product->id }}" class="btn btn-warning">Edit</a>
+
+                  {{ Form::open(['url' => 'admin-panel/product/destroy/'.$product->id, 'method' => 'POST']) }}
+                    <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                  {{ Form::close() }}
                 </td>
               </tr>
               @endforeach
