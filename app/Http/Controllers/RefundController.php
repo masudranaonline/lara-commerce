@@ -31,25 +31,23 @@ class RefundController extends Controller
     {
         $refund = new refund();
 
-        $refund->refund_number = $request->refund_number;
-        $refund->product_name = $request->product_name;
-        $refund->quantity = $request->quantity;
-        $refund->refund_amount = $request->refund_amount;
-        $refund->image = $request->image;
-        $refund->customer_name = $request->customer_name;
-        $refund->mobile_no = $request->mobile_no;
-        $refund->refund_fact = $request->refund_fact;
-        $refund->refund_date = $request->refund_date;
-        $refund->vendor_name = $request->vendor_name;
-        $refund->company_name = $request->company_name;
-        $refund->phone_no = $request->phone_no;
-        $refund->email = $request->email;
-
-        
+        $refund->refund_number      = $request->refund_number;
+        $refund->product_name       = $request->product_name;
+        $refund->quantity           = $request->quantity;
+        $refund->refund_amount      = $request->refund_amount;
+        $refund->image              = $request->image;
+        $refund->customer_name      = $request->customer_name;
+        $refund->mobile_no          = $request->mobile_no;
+        $refund->refund_fact        = $request->refund_fact;
+        $refund->refund_date        = $request->refund_date;
+        $refund->vendor_name        = $request->vendor_name;
+        $refund->company_name       = $request->company_name;
+        $refund->phone_no           = $request->phone_no;
+        $refund->email              = $request->email;
 
         try {
            $refund->save();
-           return back(); 
+           return back();
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -94,11 +92,11 @@ class RefundController extends Controller
         $refund->phone_no           = $request->phone_no;
         $refund->email              = $request->email;
 
-        
+
 
         try {
            $refund->save();
-           return back(); 
+           return back();
         } catch (\Throwable $th) {
             throw $th;
         }
