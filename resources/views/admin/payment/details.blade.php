@@ -13,23 +13,23 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-3">Payment Method name</td>
-                                <td>Bkash</td>
+                                <td>{{ $payment->payment_method }}</td>
                             </tr>
                             <tr>
                                 <td>Payment Number</td>
-                                <td>Beximco</td>
+                                <td>{{ $payment->payment_number }}</td>
                             </tr>
                             <tr>
                                 <td>Account Holder Name</td>
-                                <td>Masud Rana</td>
+                                <td>{{ $payment->account_holder_name }}</td>
                             </tr>
                             <tr>
                                 <td>Account Number</td>
-                                <td>5465468454654654</td>
+                                <td>{{ $payment->account_no }}</td>
                             </tr>
                             <tr>
                                 <td>Branc Name</td>
-                                <td>Khulna</td>
+                                <td>{{ $payment->branch_name }}</td>
                             </tr>        
                         </tbody>
                     </div>

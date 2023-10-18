@@ -38,7 +38,8 @@ class OrderController extends Controller
      */
     public function show(string $id)
     {
-        return view('admin.order.details');
+        $order = order::find($id);
+        return view('admin.order.details', compact('order'));
     }
 
     /**
@@ -46,7 +47,8 @@ class OrderController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.order.edit');
+        $order = order::find($id);
+        return view('admin.order.edit', compact('order'));
     }
 
     /**
@@ -62,6 +64,7 @@ class OrderController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        order::destroy($id);
+        return back();
     }
 }

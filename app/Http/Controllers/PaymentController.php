@@ -51,7 +51,8 @@ class PaymentController extends Controller
      */
     public function show(string $id)
     {
-        return view('admin.payment.details');
+        $payment = payment::find($id);
+        return view('admin.payment.details', compact('payment'));
     }
 
     /**
@@ -59,7 +60,8 @@ class PaymentController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.payment.edit');
+        $payment = payment::find($id);
+        return view('admin.payment.edit', compact('payment'));
     }
 
     /**
@@ -67,7 +69,21 @@ class PaymentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $payment = payment::find($id);
+
+        $payment->payment_method        = $request->payment_method;
+        $payment->payment_number        = $request->payment_number;
+        $payment->account_holder_name   = $request->account_holder_name;
+        $payment->account_no            = $request->account_no;
+        $payment->branch_name           = $request->branch_name;
+
+
+        try {
+            $payment->save();
+            return back();
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**
@@ -75,6 +91,7 @@ class PaymentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        payment::destroy($id);
+        return back();
     }
 }

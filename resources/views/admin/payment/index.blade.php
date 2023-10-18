@@ -30,9 +30,17 @@
                 <td>{{ $payment->account_no }}</td>
                 <td>{{ $payment->branch_name}}</td>
                 <td>
-                  <a href="payment_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
+                  <a href="/admin-panel/payment/show/{{ $payment->id }}" class="btn btn-info">view details</a>
+                  <a href="/admin-panel/payment/edit/{{ $payment->id}}" class="btn btn-warning">Edit</a>
+                  {{ Form::open([
+                    'url' => '/admin-panel/payment/edit/'.$payment->id,
+                    'method' => 'POST',
+                    'enctype' => 'multipart/form-data',
+                    ])
+                  }}
+                    <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                  {{ Form::close()}}
+                  
                 </td>
               </tr>
              @endforeach

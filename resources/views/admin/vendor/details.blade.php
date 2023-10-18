@@ -13,19 +13,19 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-3">Vendor name</td>
-                                <td>Ariful Islam</td>
+                                <td>{{ $vendor->vendor_name }}</td>
                             </tr>
                             <tr>
                                 <td>Company Name</td>
-                                <td>Beximco</td>
+                                <td>{{ $vendor->company_name }}</td>
                             </tr>
                             <tr>
                                 <td>Phone no</td>
-                                <td>019758415</td>
+                                <td>{{ $vendor->phone }}</td>
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td>Beximco@gmail.com</td>
+                                <td>{{ $vendor->email }}</td>
                             </tr>
                             <tr>
                                 <td>Image</td>

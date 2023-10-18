@@ -50,7 +50,8 @@ class VendorController extends Controller
      */
     public function show(string $id)
     {
-        return view('admin.vendor.details');
+        $vendor = vendor::find($id);
+        return view('admin.vendor.details', compact('vendor'));
     }
 
     /**
@@ -58,7 +59,8 @@ class VendorController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.vendor.edit');
+        $vendor = vendor::find($id);
+        return view('admin.vendor.edit', compact('vendor'));
     }
 
     /**
@@ -66,7 +68,21 @@ class VendorController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $vendor = vendor::find($id);
+
+        $vendor->vendor_name  = $request->vendor_name;
+        $vendor->company_name = $request->company_name;
+        $vendor->phone        = $request->phone;
+        $vendor->email        = $request->email;
+        $vendor->image        = $request->image;
+
+        try {
+             $vendor->save();
+             return back()->with('success', 'Vender store Successfully');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+
     }
 
     /**
@@ -74,6 +90,7 @@ class VendorController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        vendor::destroy($id);
+        return back();
     }
 }

@@ -32,9 +32,16 @@
                   <td>{{ $refund->refund_amount }}</td>
                   <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
                   <td>
-                    <a href="refand_ditels.html" class="btn btn-info">view details</a>
-                    <a href="#" class="btn btn-warning">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="/admin-panel/refund/show/{{ $refund->id }}" class="btn btn-info">view details</a>
+                    <a href="/admin-panel/refund/edit/{{ $refund->id }}" class="btn btn-warning">Edit</a>
+                    {{ Form::open([
+                      'url' => '/admin-panel/refund/edit/'.$refund->id,
+                      'method' => 'POST',
+                      'enctype' => 'multipart/form-data',
+                      ])
+                    }}
+                      <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                    {{ Form::close()}}
                   </td>
                 </tr>
               @endforeach

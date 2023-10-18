@@ -30,9 +30,17 @@
                 <td>{{ $vendor->email }}</td>
                 <td><img class="img-fluid" src="/admin/assets/img/pic.jpg" style="height: 44px; width: 45px;" alt=""></td>
                 <td>
-                  <a href="vendor_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
+                  <a href="/admin-panel/vendor/show/{{ $vendor->id}}" class="btn btn-info">view details</a>
+                  <a href="/admin-panel/vendor/edit/{{ $vendor->id}}" class="btn btn-warning">Edit</a>
+                  {{ Form::open([
+                    'url' => '/admin-panel/vendor/destroy/'.$vendor->id,
+                    'method' => 'POST',
+                    'enctype' => 'multipart/form-data',
+                    ])
+                  }}
+                    <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                  {{ Form::close()}}
+              
                 </td>
               </tr>
               @endforeach

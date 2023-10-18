@@ -33,7 +33,11 @@
                   <a href="/admin-panel/product/show/{{ $product->id }}" class="btn btn-info">view details</a>
                   <a href="/admin-panel/product/edit/{{ $product->id }}" class="btn btn-warning">Edit</a>
 
-                  {{ Form::open(['url' => 'admin-panel/product/destroy/'.$product->id, 'method' => 'POST']) }}
+                  {{ Form::open([
+                    'url' => 'admin-panel/product/destroy/'.$product->id, 
+                    'method' => 'POST'
+                    ])
+                   }}
                     <input type="submit" name="submit" value="Delete" class="btn btn-danger">
                   {{ Form::close() }}
                 </td>

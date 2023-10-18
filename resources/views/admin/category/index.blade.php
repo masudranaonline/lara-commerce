@@ -29,9 +29,16 @@
                 <td>{{ $category->brand_name }}</td>
                 <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
                 <td>
-                  <a href="product_details.html" class="btn btn-info">view details</a>
-                  <a href="#" class="btn btn-warning">Edit</a>
-                  <a href="#" class="btn btn-danger">Delete</a>
+                  <a href="/admin-panel/category/show/{{ $category->id }}" class="btn btn-info">view details</a>
+                  <a href="/admin-panel/category/edit/{{ $category->id }}" class="btn btn-warning">Edit</a>
+                  {{ Form::open([
+                    'url' => 'admin-panel/category/destroy/'.$category->id,
+                    'method' => 'POST',
+                    'enctype' => 'multipart/form-data',
+                    ])
+                  }}
+                    <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                  {{ Form::close() }}
                 </td>
               </tr>
               @endforeach
