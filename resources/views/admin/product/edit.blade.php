@@ -7,10 +7,10 @@
         <h5 class="card-title">Product Update Page</h5>
 
         <!-- Multi Columns Form -->
-        <form class="row g-3">
+        <form class="row g-3" action="/admin-panel/product/update/{{ $product->id }}">
           <div class="col-md-12">
             <label for="inputName5" class="form-label">Product Name</label>
-            <input type="text" class="form-control" id="inputName5">
+            <input type="text" class="form-control" id="inputName5" value="{{ $product->product_name }}">
           </div>
           <div class="col-md-12">
             <label for="inputName5" class="form-label">Product title</label>
@@ -90,7 +90,7 @@
               </div>
 
 
-         
+
           <div class="text-center">
             <button type="submit" class="btn btn-primary">Update</button>
           </div>
@@ -100,6 +100,5 @@
     </div>
   </main><!-- End #main -->
 @endsection
-  
 
- 
+

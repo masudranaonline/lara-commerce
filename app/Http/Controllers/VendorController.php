@@ -37,8 +37,6 @@ class VendorController extends Controller
         $vendor->email        = $request->email;
         $vendor->image        = $request->image;
 
-       
-
         try {
              $vendor->save();
              return back()->with('success', 'Vender store Successfully');
