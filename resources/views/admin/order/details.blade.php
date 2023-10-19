@@ -12,28 +12,28 @@
                         <tbody>
                           <tr>
                             <td class="col-md-3">Order Number</td>
-                            <td>32165432051</td>
+                            <td>{{ $order->order_number}}</td>
                         </tr>
                             <tr>
                                 <td class="col-md-3">Product Name</td>
-                                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
+                                <td>{{ $order->product_name}}</td>
                             </tr>
                             <tr>
                                 <td class="col-md-3">Quantity</td>
-                                <td>2</td>
+                                <td>{{ $order->quantity}}</td>
                             </tr>
                             <tr>
                               <td>Tax</td>
-                              <td>7</td>
+                              <td>{{ $order->tax}}</td>
                           </tr>
                             <tr>
                                 <td>Price</td>
-                                <td>500</td>
+                                <td>{{ $order->total_amount}}</td>
                             </tr>
-                            
+
                             <tr>
                                 <td>Status</td>
-                                <td>Pending</td>
+                                <td>{{ $order->status}}</td>
                             </tr>
                             <tr>
                                 <td>Image</td>
@@ -41,61 +41,60 @@
                             </tr>
                             <tr>
                                 <td>Order Date</td>
-                                <td>25-2-23</td>
+                                <td>{{ $order->order_date}}</td>
                             </tr>
                             <tr>
                                 <td>Delivary Date</td>
-                                <td>20-9-23</td>
+                                <td>{{ $order->delivery_date}}</td>
                             </tr>
                             <tr>
                                 <td>Payment Method</td>
-                                <td>Cash on Delivary</td>
+                                <td>{{ $order->payment_method}}</td>
                             </tr>
                             <tr>
                                 <td>Customer Name</td>
-                                <td>Masud Rana</td>
+                                <td>{{ $order->customer_name}}</td>
                             </tr>
                             <tr>
                                 <td>Mobile No</td>
-                                <td>01975483170</td>
+                                <td>{{ $order->mobile_no}}</td>
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td>masudrana@gmail.com</td>
+                                <td>{{ $order->email}}</td>
                             </tr>
                             <tr>
                                 <td>House no</td>
-                                <td>80</td>
+                                <td>{{ $order->house_no}}</td>
                             </tr>
                             <tr>
                                 <td>Road No</td>
-                                <td>15</td>
+                                <td>{{ $order->road_no}}</td>
                             </tr>
                             <tr>
                                 <td>Village</td>
-                                <td>dsfsdgf</td>
+                                <td>{{ $order->village}}</td>
                             </tr>
                             <tr>
                                 <td>Sub District</td>
-                                <td>Satkhira</td>
+                                <td>{{ $order->sub_district}}</td>
                             </tr>
                             <tr>
                                 <td>District</td>
-                                <td>Satkhira</td>
+                                <td>{{ $order->district}}</td>
                             </tr>
                             <tr>
                                 <td>Division</td>
-                                <td>Khulna</td>
+                                <td>{{ $order->division}}</td>
                             </tr>
                             <tr>
                                 <td>Country</td>
-                                <td>Bangladesh</td>
+                                <td>{{ $order->country}}</td>
                             </tr>
-                            
+
                             <tr>
                                 <td>Product Details</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Eum, vel. Molestias, velit. Temporibus quis eum dignissimos! Nostrum, harum, quae sapiente, labore corrupti vitae tempore sequi quam corporis unde hic mollitia voluptas! Ad assumenda voluptatibus ipsum voluptates iure fugiat suscipit totam ea rerum dignissimos, saepe, officiis repudiandae? Accusantium, doloribus.</td>
-                            </tr>
+                                <td>{{ $order->product_details}}</tr>
                         </tbody>
                     </div>
                 </table>
@@ -108,4 +107,3 @@
 @endsection
 ->
 
- 

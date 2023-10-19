@@ -16,72 +16,71 @@
                             </tr>
                             <tr>
                                 <td>Product Title</td>
-                                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
+                                <td>{{ $product->product_title }}</td>
                             </tr>
                             <tr>
                                 <td>Image</td>
                                 <td><img src="/admin/assets/img/aosomapto.gif" class="rounded float-start img-fluid" alt="..."></td>
                             </tr>
                             <tr>
-                                <td>250</td>
-                                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
+                                <td>Cost Price</td>
+                                <td>{{ $product->cost_price }}</td>
                             </tr>
                             <tr>
                                 <td>Sales Price</td>
-                                <td>200</td>
+                                <td>{{ $product->sales_price }}</td>
                             </tr>
                             <tr>
                                 <td>Discount Price</td>
-                                <td>25৳</td>
+                                <td>{{ $product->discount_price }}</td>
                             </tr>
                             <tr>
                                 <td>Brand Name</td>
-                                <td>ABC</td>
+                                <td>{{ $product->brand_name }}</td>
                             </tr>
                             <tr>
                                 <td>Rating</td>
-                                <td>4.5*</td>
+                                <td>{{ $product->rating }}*</td>
                             </tr>
                             <tr>
                                 <td>Quantity</td>
-                                <td>80</td>
+                                <td>{{ $product->quantity }}</td>
                             </tr>
                             <tr>
                                 <td>Minimum Quantity</td>
-                                <td>15</td>
+                                <td>{{ $product->minimum_quantity }}</td>
                             </tr>
                             <tr>
                                 <td>Size</td>
-                                <td>1.5"</td>
+                                <td>{{ $product->sizes }}"</td>
                             </tr>
                             <tr>
                                 <td>Weight</td>
-                                <td>1kg</td>
+                                <td>{{ $product->weight }}</td>
                             </tr>
                             <tr>
                                 <td>Material</td>
-                                <td>Best</td>
+                                <td>{{ $product->material }}</td>
                             </tr>
                             <tr>
                                 <td>Color Family</td>
-                                <td>Red</td>
+                                <td>{{ $product->color_family }}</td>
                             </tr>
                             <tr>
                                 <td>Warranty</td>
-                                <td>No warranty</td>
+                                <td>{{ $product->warranty }}</td>
                             </tr>
                             <tr>
                                 <td>Shipping Cost</td>
-                                <td>120৳</td>
+                                <td>{{ $product->shipping_cost }}</td>
                             </tr>
                             <tr>
                                 <td>Product Location</td>
-                                <td>Bangladesh</td>
+                                <td>{{ $product->product_location }}</td>
                             </tr>
                             <tr>
                                 <td>Product Details</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Eum, vel. Molestias, velit. Temporibus quis eum dignissimos! Nostrum, harum, quae sapiente, labore corrupti vitae tempore sequi quam corporis unde hic mollitia voluptas! Ad assumenda voluptatibus ipsum voluptates iure fugiat suscipit totam ea rerum dignissimos, saepe, officiis repudiandae? Accusantium, doloribus.</td>
-                            </tr>
+                                <td>{{ $product->descriptions }}</tr>
                         </tbody>
                     </div>
                 </table>

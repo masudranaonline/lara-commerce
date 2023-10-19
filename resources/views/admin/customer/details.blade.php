@@ -14,11 +14,11 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-3">Customer name</td>
-                                <td>Md Masud Rana</td>
+                                <td>{{ $customer->customer_name}}</td>
                             </tr>
                             <tr>
                                 <td>Customer Mobile No</td>
-                                <td>01975483170</td>
+                                <td>{{ $customer->mobile_no}}</td>
                             </tr>
                             <tr>
                                 <td>Image</td>
@@ -26,44 +26,44 @@
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td>masudrana@gmail.com</td>
+                                <td>{{ $customer->email}}</td>
                             </tr>
                             <tr>
                                 <td>Password</td>
-                                <td>dfsjdgsdgjhdf44</td>
+                                <td>{{ $customer->password}}</td>
                             </tr>
                             
                             <tr>
                                 <td>Mailing Country</td>
-                                <td>Bangladesh</td>
+                                <td>{{ $customer->mailing_country}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing Divition</td>
-                                <td>Khulna</td>
+                                <td>{{ $customer->mailing_division}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing District</td>
-                                <td>Satkhira</td>
+                                <td>{{ $customer->mailing_district}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing Sub District</td>
-                                <td>Satkhira</td>
+                                <td>{{ $customer->mailing_sub_district}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing Village</td>
-                                <td>Bhomra</td>
+                                <td>{{ $customer->mailing_village}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing Road No</td>
-                                <td>1"</td>
+                                <td>{{ $customer->mailing_roadno}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing House No</td>
-                                <td>45</td>
+                                <td>{{ $customer->mailing_houseno}}</td>
                             </tr>
                             <tr>
                                 <td>Mailing Zip code</td>
-                                <td>2515</td>
+                                <td>{{ $customer->mailing_zip}}</td>
                             </tr>
 
 
@@ -71,35 +71,35 @@
 
                             <tr>
                                 <td>Present Country</td>
-                                <td>Bangladesh</td>
+                                <td>{{ $customer->present_country}}</td>
                             </tr>
                             <tr>
                                 <td>Present Divition</td>
-                                <td>Khulna</td>
+                                <td>{{ $customer->present_division}}</td>
                             </tr>
                             <tr>
                                 <td>Present District</td>
-                                <td>Satkhira</td>
+                                <td>{{ $customer->present_district}}</td>
                             </tr>
                             <tr>
                                 <td>Present Sub District</td>
-                                <td>Satkhira</td>
+                                <td>{{ $customer->present_sub_district}}</td>
                             </tr>
                             <tr>
                                 <td>Present Village</td>
-                                <td>Bhomra</td>
+                                <td>{{ $customer->present_village}}</td>
                             </tr>
                             <tr>
                                 <td>Present Road No</td>
-                                <td>1"</td>
+                                <td>{{ $customer->present_roadno}}</td>
                             </tr>
                             <tr>
                                 <td>Present House No</td>
-                                <td>45</td>
+                                <td>{{ $customer->present_houseno}}</td>
                             </tr>
                             <tr>
                                 <td>Present Zip code</td>
-                                <td>2515</td>
+                                <td>{{ $customer->present_zip}}</td>
                             </tr>
                             
                         </tbody>

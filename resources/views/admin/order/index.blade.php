@@ -33,9 +33,16 @@
                   <td><img class="img-fluid" src="/admin/assets/img/aosomapto.gif" style="height: 44px; width: 45px;" alt=""></td>
                   <td>0</td>
                   <td>
-                    <a href="order_details.html" class="btn btn-info">view details</a>
-                    <a href="#" class="btn btn-warning">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="/admin-panel/order/show/{{ $order->id }}" class="btn btn-info">view details</a>
+                    <a href="/admin-panel/order/edit/{{ $order->id }}" class="btn btn-warning">Edit</a>
+                    {{ Form::open([
+                        'url' => '/admin-panel/order/'.$order->id,
+                        'method' => 'POST',
+                        'enctype' => 'multipart/form-data',
+                        ])
+                    }}
+                    <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                    {{ Form::close() }}
                   </td>
                 </tr>
               @endforeach
@@ -47,6 +54,5 @@
       </div>
   </main><!-- End #main -->
 @endsection
-  
 
- 
+

@@ -45,6 +45,7 @@
                     ])
                 }}
                     <button type="submit">icon</button>
+
                     <input type="submit" name="submit" value="Delete" class="btn btn-danger">
                   {{ Form::close() }}
                 </td>

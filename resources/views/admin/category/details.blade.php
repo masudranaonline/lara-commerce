@@ -12,11 +12,11 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-3">Product name</td>
-                                <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
+                                <td>{{ $category->product_name }}</td>
                             </tr>
                             <tr>
                                 <td>Category Name</td>
-                                <td>History</td>
+                                <td>{{ $category->category_name }}</td>
                             </tr>
                             <tr>
                                 <td>Image</td>
@@ -24,36 +24,43 @@
                             </tr>
                             <tr>
                                 <td>Cost Price</td>
-                                <td>250</td>
+                                <td>{{ $category->cost_price }}</td>
                             </tr>
                             <tr>
                                 <td>Sales Price</td>
-                                <td>300</td>
+                                <td>{{ $category->sales_price }}</td>
                             </tr>
                             <tr>
                                 <td>Discount Price</td>
-                                <td>25৳</td>
+                                <td>{{ $category->discount }}৳</td>
                             </tr>
                             <tr>
                                 <td>Brand Name</td>
-                                <td>ABC</td>
+                                <td>{{ $category->brand_name }}</td>
                             </tr>
                             <tr>
                                 <td>Quantity</td>
-                                <td>80</td>
+                                <td>{{ $category->quantity }}</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>{{ $category->color_family }}</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>{{ $category->warranty }}</td>
                             </tr>
                             <tr>
                                 <td>Shipping Cost</td>
-                                <td>120৳</td>
+                                <td>{{ $category->shipping_cost }}</td>
                             </tr>
                             <tr>
                                 <td>Product Location</td>
-                                <td>Bangladesh</td>
+                                <td>{{ $category->product_location }}</td>
                             </tr>
                             <tr>
                                 <td>Product Details</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eligendi. Eum, vel. Molestias, velit. Temporibus quis eum dignissimos! Nostrum, harum, quae sapiente, labore corrupti vitae tempore sequi quam corporis unde hic mollitia voluptas! Ad assumenda voluptatibus ipsum voluptates iure fugiat suscipit totam ea rerum dignissimos, saepe, officiis repudiandae? Accusantium, doloribus.</td>
-                            </tr>
+                                <td>{{ $category->description }}</tr>
                         </tbody>
                     </div>
                 </table>

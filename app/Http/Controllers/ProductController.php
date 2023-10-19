@@ -112,7 +112,7 @@ class ProductController extends Controller
 
         try {
             $product->save();
-            return back()->with('success', 'Product Updated successfully');
+            return back();
         } catch (\Throwable $th) {
             throw $th;
         }

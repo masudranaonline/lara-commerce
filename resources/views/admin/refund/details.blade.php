@@ -13,23 +13,23 @@
                             <tbody>
                                 <tr>
                                     <td class="col-md-3">Refand Number</td>
-                                    <td>246432165</td>
+                                    <td>{{ $refund->refund_number }}</td>
                                 </tr>
                                 <tr>
                                     <td>Product Name</td>
-                                    <td>অসমাপ্ত আত্মজীবনী (ডিলাক্স)</td>
+                                    <td>{{ $refund->product_name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Quantity</td>
-                                    <td>2</td>
+                                    <td>{{ $refund->quantity }}</td>
                                 </tr>
                                 <tr>
                                     <td>Sales Price</td>
-                                    <td>5000</td>
+                                    <td>{{ $refund->refund_amount }}</td>
                                 </tr>
                                 <tr>
                                     <td>Returnded Price</td>
-                                    <td>5000</td>
+                                    <td>{{ $refund->refund_amount }}</td>
                                 </tr>
                                 <tr>
                                     <td>Image</td>
@@ -37,35 +37,35 @@
                                 </tr>
                                 <tr>
                                     <td>Customer Name</td>
-                                    <td>Ariful Islam</td>
+                                    <td>{{ $refund->customer_name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Mobile No</td>
-                                    <td>01985545221</td>
+                                    <td>{{ $refund->mobile_no }}</td>
                                 </tr>
                                 <tr>
                                     <td>Return fact</td>
-                                    <td>Damage</td>
+                                    <td>{{ $refund->refund_fact }}</td>
                                 </tr>
                                 <tr>
                                     <td>Return Date</td>
-                                    <td>15-09-23</td>
+                                    <td>{{ $refund->refund_date }}</td>
                                 </tr>
                                 <tr>
                                     <td>Vendor Name</td>
-                                    <td>Ashik Hossian</td>
+                                    <td>{{ $refund->vendor_name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Company Name</td>
-                                    <td>Beximco</td>
+                                    <td>{{ $refund->company_name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Phone No</td>
-                                    <td>+8462261121</td>
+                                    <td>{{ $refund->phone_no }}</td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
-                                    <td>email@gmail.com</td>
+                                    <td>{{ $refund->email }}</td>
                                 </tr>
                                 
                             </tbody>
