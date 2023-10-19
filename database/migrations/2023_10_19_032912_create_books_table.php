@@ -11,29 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->bigint('category_id');
-            $table->bigint('author_id')->nullable();
-            $table->bigint('publisher_id')->nullable();
+            $table->bigint('author_id');
+            $table->bigint('publisher_id');
             $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->string('image', 500)->nullable();
             $table->float('cost_price')->nullable();
             $table->float('sales_price')->nullable();
             $table->float('discount_price')->nullable();
-            $table->string('brand')->nullable();
             $table->float('rating')->nullable();
             $table->float('quantity')->nullable();
             $table->float('minimum_quantity')->nullable();
-            $table->string('sizes')->nullable();
-            $table->string('materials')->nullable();
-            $table->string('color')->nullable();
-            $table->string('weight')->nullable();
-            $table->string('warranty')->nullable();
+            $table->string('pages')->nullable();
+            $table->string('edition')->nullable();
             $table->string('origin')->nullable();
             $table->string('language')->nullable();
             $table->boolean('is_ebook')->nullable();
+            $table->string('pdf', 500)->nullable();
             $table->timestamps();
         });
     }
@@ -43,6 +40,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('books');
     }
 };
