@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="product_in_de">
-                                        {{ Form::open(['url' => '/cart/decrease/'.$item->id, 'method' => 'POST', 'class' => 'form-inline']) }}
+                                        {{ Form::open(['url' => '/cart/decrease/'.$item->id, 'method' => 'POST']) }}
                                         <button type="submit"><i class="fa-solid fa-minus"></i></button>
                                         {{ Form::close() }}
 

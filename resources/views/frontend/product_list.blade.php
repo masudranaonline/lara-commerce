@@ -93,12 +93,12 @@
                                         <p class="book_authore">product in stock</p>
                                         <span class="discount-price">৳{{ $product->sales_price }}</span>
                                         <div class="add_card_overlay1">
-                                            <a class="view_no_1" href="/products/show/{{ $product->id }}">View Details</a>
-                                        </div>
-                                        <div class="view_pro_overlay1">
                                             {{ Form::open(['url' => '/cart/store/'.$product->id, 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
                                             <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
                                             {{ Form::close() }}
+                                        </div>
+                                        <div class="view_pro_overlay1">
+                                            <a class="view_no_1" href="/products/show/{{ $product->id }}">View Details</a>
                                         </div>
                                 </div>
                             </div>

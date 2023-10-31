@@ -840,11 +840,12 @@ body {
     padding-top: 40px;
     padding-left: 36px;
     float: left;
-
+    display: -webkit-inline-box;
 }
 .cart .product_ditels .product_in_de input{
     width: 34px;
     height: 34px;
+    margin: 5px;
 }
 .cart .product_ditels .product_in_de button{
     width: 30px;
@@ -956,7 +957,7 @@ body {
 
     cursor: pointer;
 }
-.list_page_ditels .add_card_overlay1 a {
+.list_page_ditels .add_card_overlay1 button {
     background-color: #0397d3;
     color: white;
     padding: 5px 10px;
@@ -993,6 +994,7 @@ body {
     height: 100%;
     opacity: 1;
     box-shadow: 1px 3px 7px 1px #d84a38;
+    z-index: 1;
 }
 
 .list_page_ditels:hover .view_pro_overlay1 {
