@@ -25,10 +25,28 @@
               <i class="bi bi-circle"></i><span>All product</span>
             </a>
           </li>
-         
-         
         </ul>
-      </li><!-- End Components Nav -->
+      </li>
+      <!-- End product Nav -->
+      <!-- start book Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#Book-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Book</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="Book-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/admin-panel/book/create">
+              <i class="bi bi-circle"></i><span>Add Book</span>
+            </a>
+          </li>
+          <li>
+            <a href="/admin-panel/book">
+              <i class="bi bi-circle"></i><span>All Book</span>
+            </a>
+          </li>
+        </ul>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">

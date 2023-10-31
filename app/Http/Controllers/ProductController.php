@@ -33,26 +33,23 @@ class ProductController extends Controller
         // return $request;
         $product = new product();
 
-        $product->product_name      = $request->product_name;
-        $product->product_title     = $request->product_title;
+        $product->category_id       = $request->category_id;
+        $product->name              = $request->name;
         $product->image             = $request->image;
-        $product->cost_price        = $request->cost_price;
         $product->cost_price        = $request->cost_price;
         $product->sales_price       = $request->sales_price;
         $product->discount_price    = $request->discount_price;
-        $product->brand_name        = $request->brand_name;
+        $product->brand             = $request->brand;
         $product->rating            = $request->rating;
         $product->quantity          = $request->quantity;
         $product->minimum_quantity  = $request->minimum_quantity;
         $product->sizes             = $request->sizes;
         $product->weight            = $request->weight;
-        $product->material          = $request->material;
-        $product->material          = $request->material;
-        $product->color_family      = $request->color_family;
+        $product->materials         = $request->materials;
+        $product->color             = $request->color;
         $product->warranty          = $request->warranty;
-        $product->shipping_cost     = $request->shipping_cost;
-        $product->product_location  = $request->product_location;
-        $product->descriptions      = $request->descriptions;
+        $product->origin            = $request->origin;
+        $product->description      = $request->description;
 
         try {
             $product->save();
@@ -89,26 +86,23 @@ class ProductController extends Controller
     {
         $product = product::find($id);
 
-        $product->product_name      = $request->product_name;
-        $product->product_title     = $request->product_title;
+        $product->category_id       = $request->category_id;
+        $product->name              = $request->name;
         $product->image             = $request->image;
-        $product->cost_price        = $request->cost_price;
         $product->cost_price        = $request->cost_price;
         $product->sales_price       = $request->sales_price;
         $product->discount_price    = $request->discount_price;
-        $product->brand_name        = $request->brand_name;
+        $product->brand             = $request->brand;
         $product->rating            = $request->rating;
         $product->quantity          = $request->quantity;
         $product->minimum_quantity  = $request->minimum_quantity;
         $product->sizes             = $request->sizes;
         $product->weight            = $request->weight;
-        $product->material          = $request->material;
-        $product->material          = $request->material;
-        $product->color_family      = $request->color_family;
+        $product->materials         = $request->materials;
+        $product->color             = $request->color;
         $product->warranty          = $request->warranty;
-        $product->shipping_cost     = $request->shipping_cost;
-        $product->product_location  = $request->product_location;
-        $product->descriptions      = $request->descriptions;
+        $product->origin            = $request->origin;
+        $product->description      = $request->description;
 
         try {
             $product->save();

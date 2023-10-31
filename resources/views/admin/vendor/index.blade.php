@@ -30,17 +30,18 @@
                 <td>{{ $vendor->email }}</td>
                 <td><img class="img-fluid" src="/admin/assets/img/pic.jpg" style="height: 44px; width: 45px;" alt=""></td>
                 <td>
-                  <a href="/admin-panel/vendor/show/{{ $vendor->id}}" class="btn btn-info">view details</a>
-                  <a href="/admin-panel/vendor/edit/{{ $vendor->id}}" class="btn btn-warning">Edit</a>
+                  <a href="/admin-panel/vendor/show/{{ $vendor->id}}" class="btn btn-info"><i class="bi bi-view-stacked"></i></a>
+                  <a href="/admin-panel/vendor/edit/{{ $vendor->id}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                   {{ Form::open([
                     'url' => '/admin-panel/vendor/destroy/'.$vendor->id,
                     'method' => 'POST',
                     'enctype' => 'multipart/form-data',
+                    'class' => 'form_horizontal_all'
                     ])
                   }}
-                    <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                    <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
                   {{ Form::close()}}
-              
+
                 </td>
               </tr>
               @endforeach
@@ -54,4 +55,3 @@
 @endsection
 
 
-  

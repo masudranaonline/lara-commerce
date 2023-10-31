@@ -63,11 +63,13 @@ class OrderController extends Controller
         $order->product_name    = $request->product_name;
         $order->quantity        = $request->quantity;
         $order->tax             = $request->tax;
+        $order->total_amount    = $request->total_amount;
         $order->status          = $request->status;
         $order->image           = $request->image;
         $order->order_date      = $request->order_date;
         $order->delivery_date   = $request->delivery_date;
         $order->payment_method  = $request->payment_method;
+        $order->customer_name   = $request->customer_name;
         $order->mobile_no       = $request->mobile_no;
         $order->email           = $request->email;
         $order->house_no        = $request->house_no;

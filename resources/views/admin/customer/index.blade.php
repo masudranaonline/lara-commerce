@@ -21,7 +21,7 @@
             </thead>
             <tbody>
               @php $serial = 0; @endphp
-              @foreach($customers as $customer) 
+              @foreach($customers as $customer)
                 @php $serial ++; @endphp
                 <tr>
                   <th scope="row">{{ $serial }}</th>
@@ -30,16 +30,17 @@
                   <td>{{ $customer->email }}</td>
                   <td><img class="img-fluid" src="/admin/assets/img/pic.jpg" style="height: 44px; width: 45px;" alt=""></td>
                   <td>
-                    <a href="/admin-panel/customer/show/{{ $customer->id }}" class="btn btn-info">view details</a>
-                    <a href="/admin-panel/customer/edit/{{ $customer->id}}" class="btn btn-warning">Edit</a>
+                    <a href="/admin-panel/customer/show/{{ $customer->id }}" class="btn btn-info"><i class="bi bi-view-stacked"></i></a>
+                    <a href="/admin-panel/customer/edit/{{ $customer->id}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
                     {{ Form::open([
                       'url' => 'admin-panel/customer/destroy/'.$customer->id,
                       'method' => 'POST',
                       'enctype' => 'multipart/form-data',
+                      'class' => 'form_horizontal_all'
                       ])
                      }}
                         <div class="rr" style="position: absolute; display:contents;">
-                             <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                             <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
                         </div>
                      {{ Form::close() }}
                   </td>
@@ -53,6 +54,5 @@
       </div>
   </main><!-- End #main -->
 @endsection
-  
 
-  
+

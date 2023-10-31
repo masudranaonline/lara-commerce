@@ -14,6 +14,6 @@ class payment extends Model
         'payment_number',
         'account_holder_name',
         'account_no',
-        'branch_name',  
+        'branch_name',
     ];
 }

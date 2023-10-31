@@ -6,7 +6,7 @@
       <div class="card-body">
         <h5 class="card-title">Product Update Page</h5>
 
-        
+
         {{ Form::open([
           'url' => '/admin-panel/product/update/'.$product->id,
           'method' => 'POST',
@@ -16,14 +16,13 @@
 
           <div class="row g-3">
             <div class="col-md-12">
-              <label for="product_name" class="form-label">Product Name</label>
-              <input type="text" class="form-control" id="product_name" name="product_name" value="{{ $product->product_name }}">
-            </div>
+                <label for="category_id" class="form-label">Category Id</label>
+                <input type="text" class="form-control" id="category_id" name="category_id" value="{{ $product->category_id }}">
+              </div>
             <div class="col-md-12">
-              <label for="product_title" class="form-label">Product title</label>
-              <input type="text" class="form-control" id="product_title" name="product_title" value="{{ $product->product_title }}">
+              <label for="name" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="name" name="name" value="{{ $product->name }}">
             </div>
-
             <div class="row">
               <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
               <div class=" col-md-12">
@@ -45,8 +44,8 @@
             </div>
 
             <div class="col-md-6">
-              <label for="brand_name" class="form-label">Brand Name</label>
-              <input type="text" class="form-control" id="brand_name" name="brand_name" value="{{ $product->brand_name }}">
+              <label for="brand" class="form-label">Brand Name</label>
+              <input type="text" class="form-control" id="brand" name="brand" value="{{ $product->brand }}">
             </div>
             <div class="col-md-6">
               <label for="rating" class="form-label">Rating</label>
@@ -70,13 +69,13 @@
               <input type="text" class="form-control" id="weight" name="weight" value="{{ $product->weight }}">
             </div>
             <div class="col-md-4">
-              <label for="material" class="form-label">Material</label>
-              <input type="text" class="form-control" name="material" name="material" value="{{ $product->material }}">
+              <label for="materials" class="form-label">Material</label>
+              <input type="text" class="form-control" name="materials" name="materials" value="{{ $product->materials }}">
             </div>
 
             <div class="col-md-6">
-              <label for="color_family" class="form-label">Color Family</label>
-                <input type="text" class="form-control" id="color_family" name="color_family" value="{{ $product->color_family }}">
+              <label for="color" class="form-label">Color Family</label>
+                <input type="text" class="form-control" id="color" name="color" value="{{ $product->color }}">
               </div>
               <div class="col-md-6">
                 <label for="warranty" class="form-label">Warranty</label>
@@ -84,17 +83,13 @@
               </div>
 
               <div class="col-md-6">
-                <label for="shipping_cost" class="form-label">Shipping Cost</label>
-                  <input type="text" class="form-control" name="shipping_cost" id="shipping_cost" value="{{ $product->shipping_cost }}">
-                </div>
-                <div class="col-md-6">
-                  <label for="product_location" class="form-label">Product Location</label>
-                  <input type="text" class="form-control" name="product_location" id="product_location" value="{{ $product->product_location }}">
+                <label for="origin" class="form-label">Origin</label>
+                  <input type="text" class="form-control" name="origin" id="origin" value="{{ $product->origin }}">
                 </div>
                 <div class="col-md-12">
-                  <label for="descriptions" class="form-label">Product Details</label>
-                  <textarea class="form-control" rows="5" style="width: 100%;" name="descriptions" id="descriptions" >
-                    {{ $product->descriptions }}
+                  <label for="description" class="form-label">Product Details</label>
+                  <textarea class="form-control" rows="5" style="width: 100%;" name="description" id="description" >
+                    {{ $product->description }}
                   </textarea>
                 </div>
 

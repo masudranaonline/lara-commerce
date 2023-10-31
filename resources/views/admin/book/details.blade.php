@@ -12,11 +12,22 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-3">Category Id</td>
-                                <td>{{ $product->category_id }}</td>
+                                <td>{{ $book->category_id }}</td>
                             </tr>
                             <tr>
-                                <td class="col-md-3">Product name</td>
-                                <td>{{ $product->name }}</td>
+                                <tr>
+                                    <td class="col-md-3">Author Id</td>
+                                    <td>{{ $book->author_id }}</td>
+                                </tr>
+                                <tr>
+                                    <tr>
+                                        <td class="col-md-3">Publisher Id</td>
+                                        <td>{{ $book->publisher_id }}</td>
+                                    </tr>
+                                    <tr>
+                            <tr>
+                                <td class="col-md-3">book name</td>
+                                <td>{{ $book->name }}</td>
                             </tr>
                             <tr>
                                 <td>Image</td>
@@ -24,60 +35,55 @@
                             </tr>
                             <tr>
                                 <td>Cost Price</td>
-                                <td>{{ $product->cost_price }}</td>
+                                <td>{{ $book->cost_price }}</td>
                             </tr>
                             <tr>
                                 <td>Sales Price</td>
-                                <td>{{ $product->sales_price }}</td>
+                                <td>{{ $book->sales_price }}</td>
                             </tr>
                             <tr>
                                 <td>Discount Price</td>
-                                <td>{{ $product->discount_price }}</td>
-                            </tr>
-                            <tr>
-                                <td>Brand Name</td>
-                                <td>{{ $product->brand }}</td>
+                                <td>{{ $book->discount_price }}</td>
                             </tr>
                             <tr>
                                 <td>Rating</td>
-                                <td>{{ $product->rating }}*</td>
+                                <td>{{ $book->rating }}*</td>
                             </tr>
                             <tr>
                                 <td>Quantity</td>
-                                <td>{{ $product->quantity }}</td>
+                                <td>{{ $book->quantity }}</td>
                             </tr>
                             <tr>
                                 <td>Minimum Quantity</td>
-                                <td>{{ $product->minimum_quantity }}</td>
+                                <td>{{ $book->minimum_quantity }}</td>
                             </tr>
                             <tr>
-                                <td>Size</td>
-                                <td>{{ $product->sizes }}"</td>
+                                <td>Pages</td>
+                                <td>{{ $book->pages }}"</td>
                             </tr>
                             <tr>
-                                <td>Weight</td>
-                                <td>{{ $product->weight }}</td>
+                                <td>Edition</td>
+                                <td>{{ $book->edition }}</td>
                             </tr>
                             <tr>
-                                <td>Material</td>
-                                <td>{{ $product->materials }}</td>
+                                <td>Origin</td>
+                                <td>{{ $book->origin }}</td>
                             </tr>
                             <tr>
-                                <td>Color Family</td>
-                                <td>{{ $product->color }}</td>
+                                <td>Language</td>
+                                <td>{{ $book->language }}</td>
                             </tr>
                             <tr>
-                                <td>Warranty</td>
-                                <td>{{ $product->warranty }}</td>
+                                <td>is_ebook</td>
+                                <td>{{ $book->is_ebook }}</td>
                             </tr>
                             <tr>
-                                <td>Origin Cost</td>
-                                <td>{{ $product->origin }}</td>
+                                <td>pdf</td>
+                                <td>{{ $book->pdf }}</td>
                             </tr>
                             <tr>
-                            <tr>
-                                <td>Product Details</td>
-                                <td>{{ $product->description }}</tr>
+                                <td>book Details</td>
+                                <td>{{ $book->description }}</tr>
                         </tbody>
                     </div>
                 </table>

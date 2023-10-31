@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('book_deals', function (Blueprint $table) {
             $table->id();
-            $table->bigint('book_id');
+            $table->bigInteger('book_id');
             $table->datetime('offer_end')->nullable();
             $table->timestamps();
         });

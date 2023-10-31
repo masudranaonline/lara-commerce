@@ -35,16 +35,16 @@
             <label for="account_no" class="form-label">Account no</label>
             <input type="text" class="form-control" name="account_no" id="account_no">
           </div>
-          
+
           <div class="col-md-12">
             <label for="branch_name" class="form-label">Brance Name</label>
             <input type="text" class="form-control" name="branch_name" id="branch_name">
           </div>
-         
 
-         
 
-         
+
+
+
           <div class="text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
@@ -53,6 +53,5 @@
       </div>
     </div>
   </main><!-- End #main -->
- 
+
   @endsection
- 

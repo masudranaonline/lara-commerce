@@ -31,19 +31,8 @@ class CategoryController extends Controller
     {
         $category = new category();
 
-        $category->product_name     = $request->product_name;
-        $category->category_name    = $request->category_name;
-        $category->product_name     = $request->product_name;
+        $category->name             = $request->name;
         $category->image            = $request->image;
-        $category->cost_price       = $request->cost_price;
-        $category->sales_price      = $request->sales_price;
-        $category->discount         = $request->discount;
-        $category->brand_name       = $request->brand_name;
-        $category->quantity         = $request->quantity;
-        $category->color_family     = $request->color_family;
-        $category->warranty         = $request->warranty;
-        $category->shipping_cost    = $request->shipping_cost;
-        $category->product_location = $request->product_location;
         $category->description      = $request->description;
 
         try {
@@ -79,19 +68,8 @@ class CategoryController extends Controller
     {
         $category = category::find($id);
 
-        $category->product_name     = $request->product_name;
-        $category->category_name    = $request->category_name;
-        $category->product_name     = $request->product_name;
+        $category->name             = $request->name;
         $category->image            = $request->image;
-        $category->cost_price       = $request->cost_price;
-        $category->sales_price      = $request->sales_price;
-        $category->discount         = $request->discount;
-        $category->brand_name       = $request->brand_name;
-        $category->quantity         = $request->quantity;
-        $category->color_family     = $request->color_family;
-        $category->warranty         = $request->warranty;
-        $category->shipping_cost    = $request->shipping_cost;
-        $category->product_location = $request->product_location;
         $category->description      = $request->description;
 
         try {

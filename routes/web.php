@@ -18,6 +18,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RefundController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\AdminCartController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,16 @@ Route::group(['prefix' => 'admin-panel',], function(){
         Route::post('update/{id}', [ProductController::class, 'update']);
         Route::get('show/{id}', [ProductController::class, 'show']);
         Route::post('destroy/{id}', [ProductController::class, 'destroy']);
+    });
+
+    Route::group(['prefix' => 'book'], function(){
+        Route::get('/', [BookController::class, 'index']);
+        Route::get('create', [BookController::class, 'create']);
+        Route::post('store', [BookController::class, 'store']);
+        Route::get('edit/{id}', [BookController::class, 'edit']);
+        Route::post('update/{id}', [BookController::class, 'update']);
+        Route::get('show/{id}', [BookController::class, 'show']);
+        Route::post('destroy/{id}', [BookController::class, 'destroy']);
     });
 
     Route::group(['prefix' => 'category'], function(){

@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->bigint('category_id');
-            $table->bigint('author_id')->nullable();
-            $table->bigint('publisher_id')->nullable();
+            $table->bigInteger('category_id');
             $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->string('image', 500)->nullable();
@@ -32,8 +30,6 @@ return new class extends Migration
             $table->string('weight')->nullable();
             $table->string('warranty')->nullable();
             $table->string('origin')->nullable();
-            $table->string('language')->nullable();
-            $table->boolean('is_ebook')->nullable();
             $table->timestamps();
         });
     }
