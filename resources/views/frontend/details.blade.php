@@ -1,7 +1,7 @@
 
 @extends('frontend/layout/master')
 @section('content')
-    
+
 
 
 
@@ -28,26 +28,26 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-9 product_bg shadow">
                     <div class="details">
-                        
+
                             <div class="img">
                                 <img class="img-fluid" src="/frontend/asset/img/Quran_Diye_Niyer_Chikitsa_Karun-Hafej_Mahomudul_Hasan_Madani-7460d-116911.jpg" alt="">
                             </div>
-                        <div class="all_detail"> 
+                        <div class="all_detail">
                             <div class="text">
-                                <h3>কুরআন দিয়ে নিজের চিকিৎসা করুন <span style="font-size: 14px; color: #926866;">(পেপারব্যাক)</span></h3>
+                                <h3>{{ $product->name }} <span style="font-size: 14px; color: #926866;">(পেপারব্যাক)</span></h3>
                                 <span>by <a href="#">আবুল ফিদা মুহাম্মাদ ইজ্জত মুহাম্মাদ আরেফ ,</a> <a href="#"> হাফেয মাহমুদুল হাসান মাদানী (অনুবাদক)</a></span>
-                                <p>Category: <span>#1 Best Seller</span> in <a href="#">ইসলামি চিকিৎসা ও স্বাস্থ্যবিধি</a></p>
+                                <p>Category: <span>{{ $product->category->name }}</p>
                             </div>
-                            <div class="rating-section text-left rating_color"> 
+                            <div class="rating-section text-left rating_color">
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
-                                <span class="text-secondary">33 Rating | 120 Review</span> 
+                                <span class="text-secondary">33 Rating | 120 Review</span>
                             </div>
                             <h4>TK.32</h4>
                             <div class="button">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\product;
 
 class ProductlistController extends Controller
 {
@@ -11,7 +12,8 @@ class ProductlistController extends Controller
      */
     public function index()
     {
-        return view('frontend.product_list');
+        $products = product::with('category')->get();
+        return view('frontend.product_list', compact('products'));
     }
 
     /**
@@ -35,7 +37,8 @@ class ProductlistController extends Controller
      */
     public function show(string $id)
     {
-        return view('frontend.details');
+        $product = product::with('category')->find($id);
+        return view('frontend.details', compact('product'));
     }
 
     /**
