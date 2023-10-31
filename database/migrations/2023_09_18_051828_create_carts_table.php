@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('warranty')->nullable();
             $table->string('payment_method')->nullable();
             $table->integer('shipping_cost')->nullable();
-            
+
             $table->timestamps();
         });
     }

@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('book_deals', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('book_id');
-            $table->datetime('offer_end')->nullable();
-            $table->timestamps();
+        Schema::table('products', function (Blueprint $table) {
+            $table->integer('rating_count')->after('rating')->nullable();
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('book_deals');
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropIfExists('rating_count');
+        });
     }
 };

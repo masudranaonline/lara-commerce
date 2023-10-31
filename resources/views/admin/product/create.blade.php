@@ -19,7 +19,11 @@
                 <div class="row g-3">
                     <div class="col-md-12">
                         <label for="category_id" class="form-label">Category Id</label>
-                        <input type="number" class="form-control" name="category_id" id="category_id">
+                        <select name="category_id" class="form-control" id="">
+                            @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col-md-12">
                         <label for="name" class="form-label">Product Name</label>

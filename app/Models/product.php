@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\category;
 
 class product extends Model
 {
@@ -18,6 +19,7 @@ class product extends Model
         'discount_price',
         'brand',
         'rating',
+        'rating_count',
         'quantity',
         'minimum_quantity',
         'sizes',
@@ -28,4 +30,9 @@ class product extends Model
         'origin',
         'description',
     ];
+
+
+    public function category(){
+        return $this->belongsTo(category::class, 'category_id', 'id');
+    }
 }
