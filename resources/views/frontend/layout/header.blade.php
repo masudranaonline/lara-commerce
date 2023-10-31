@@ -38,8 +38,16 @@
                       </form>
                 </div>
                 <div class="col-md-3 text-end top">
-                    <a href="cart.html"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                    <a href="login.html" class="sign">Sign in</a>
+                    <a href="/cart"><i class="fa-solid fa-cart-shopping cart"></i></a>
+
+
+
+                    @if(Auth::id() == null)
+                    <a href="/login" class="sign">Login</a>
+                    @else
+                    <a href="/dashboard" class="sign">{{ Auth::user()->name }}</a>
+                    @endif
+
                 </div>
             </div>
         </div>

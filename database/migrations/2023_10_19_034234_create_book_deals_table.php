@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('book_deals', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->bigInteger('book_id');
+=======
+            $table->unsignedBigInteger('book_id');
+>>>>>>> 15f5bb9 (- Installed Breeze)
             $table->datetime('offer_end')->nullable();
             $table->timestamps();
         });
