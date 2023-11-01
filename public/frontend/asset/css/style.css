@@ -1356,3 +1356,67 @@ body {
 .total p span {
     padding-left: 85px;
 }
+
+
+
+/*wish list*/
+
+
+
+.wish_list .top h4{
+    color: #333333;
+    font-size: 28px;
+    line-height: 45px;
+}
+.wish_list .top p{
+    color: #666666;
+    font-size: 20px;
+    font-weight: 400;
+}
+.wish_list .main{
+    display: flex;
+    border-top: 1px dotted #e2e2e2;
+}
+.wish_list .main .details {
+    padding-left: 20px;
+    line-height: 48px;
+}
+.wish_list .main .details h3{
+    color: #333333;
+    font-size: 22px;
+    font-weight: 300;
+}
+.wish_list .main .details p{
+    color: #bb9a8d;
+}
+.wish_list .main .details h6{
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+.wish_list .main .details h6 strike{
+    color: #bb9a8d;
+}
+.wish_list .main .details .rating {
+    font-size: 18px;
+    font-weight: 500;
+}
+.wish_list .main .details button {
+    color: #fdaa2d!important;
+    border: 1px solid #fdaa2d;
+    border-radius: 5px;
+    width: 170px;
+    background-color: #ffffff;
+}
+.wish_list .main .details button:hover {
+    background-color: #fdaa2d;
+    color: white!important;
+}
+.wish_list .main .details button img:hover {
+    color: white!important;
+}
+.wish_list .main .delete {
+    padding: 8% 40%;
+    font-size: 18px;
+    color: black;
+}

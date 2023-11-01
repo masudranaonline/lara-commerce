@@ -49,12 +49,19 @@
                                 <span class="fa fa-star"></span>
                                 <span class="text-secondary">33 Rating | 120 Review</span>
                             </div>
-                            <h4>TK.32</h4>
+                            <h4>TK.{{ $product->sales_price }}</h4>
                             <div class="button">
                                 <a href="#">Buy Book</a>
                             </div>
                             <div class="icon_link">
-                                <a href="#"><i class="fa-regular fa-heart"></i> Add to Booklist</a>
+                                {{ Form::open([
+                                    'url' => '/wishlist/store/'.$product->id,
+                                    'method' => 'POST',
+                                    'enctype' => 'multipart/form-data'
+                                ])}}
+                                    <button type="submit" class="btn btn-default"><i class="fa-regular fa-heart"></i> Add to Booklist</button>
+                                {{ Form::close() }}
+
                                 <a href="#"><i class="bi bi-share"></i> Share This Book</a>
                             </div>
                             <div class="policy">

@@ -19,6 +19,7 @@ use App\Http\Controllers\RefundController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\AdminCartController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\WishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -143,5 +144,11 @@ Route::get('/checkout', [CheckoutController::class, 'index']);
 Route::get('/invoice', [InvoiceController::class, 'index']);
 Route::get('/products', [ProductlistController::class, 'index']);
 Route::get('/products/show/{id}', [ProductlistController::class, 'show']);
+
+Route::get('/wishlist', [WishController::class, 'index']);
+Route::post('/wishlist/store/{id}', [WishController::class, 'store']);
+Route::post('/wishlist/destroy/{id}', [WishController::class, 'destroy']);
+
+
 
 require __DIR__.'/auth.php';
