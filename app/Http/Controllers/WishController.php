@@ -32,17 +32,23 @@ class WishController extends Controller
     public function store(Request $request, $productId)
     {
         $user_wishlist = wishlist::where('product_id', $productId)->where('user_id', Auth::id())->first();
-        $product = product::find($productId);
 
-        $wishlist = new wishlist();
+        if($user_wishlist == null) {
+            $product = product::find($productId);
 
-        $wishlist->product_id = $productId;
-        $wishlist->user_id = Auth::id();
-        $wishlist->quantity = 1;
-        $wishlist->price = $product->sales_price;
-        $wishlist->total = $product->sales_price;
+            $wishlist = new wishlist();
 
-        $wishlist->save();
+            $wishlist->product_id = $productId;
+            $wishlist->user_id = Auth::id();
+            $wishlist->quantity = 1;
+            $wishlist->price = $product->sales_price;
+            $wishlist->total = $product->sales_price;
+
+            $wishlist->save();
+
+        }else {
+            return back();
+        }
         return back();
     }
 
