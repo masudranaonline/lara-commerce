@@ -32,7 +32,7 @@
                                         <input type="checkbox">
                                     </div>
                                     <div class="item_details">
-                                        <img src="/frontend/asset/img/Civics_1st_papernews-Professor_Dr_Md_Mojammed_Haque-73be7-70437.jpg"
+                                        <img src="/admin/assets/img/{{ $item->product->image}}"
                                             alt="">
                                         <div class="sub_per_name">
                                             <h6>{{ $item->product->name }}</h6>

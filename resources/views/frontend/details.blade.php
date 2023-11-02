@@ -33,7 +33,7 @@
                     <div class="details">
 
                             <div class="img">
-                                <img class="img-fluid" src="/frontend/asset/img/Quran_Diye_Niyer_Chikitsa_Karun-Hafej_Mahomudul_Hasan_Madani-7460d-116911.jpg" alt="">
+                                <img class="img-fluid" src="/admin/assets/img/{{ $product->image }}" alt="">
                             </div>
                         <div class="all_detail">
                             <div class="text">
@@ -53,6 +53,7 @@
                             <div class="button">
                                 <a href="#">Buy Book</a>
                             </div>
+                            @if(Auth::user() != null)
                             <div class="icon_link">
                                 {{ Form::open([
                                     'url' => '/wishlist/store/'.$product->id,
@@ -64,6 +65,7 @@
 
                                 <a href="#"><i class="bi bi-share"></i> Share This Book</a>
                             </div>
+                            @endif
                             <div class="policy">
                                 <span><img src="/frontend/asset/img/rok-icon-happy-return.svg" alt="">7 Days Happy Return</span>
                                 <span><img src="/frontend/asset/img/rok-icon-cod.svg" alt=""> Cash On Delivery</span>

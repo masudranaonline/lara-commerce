@@ -1379,11 +1379,11 @@ body {
 }
 .wish_list .main .details {
     padding-left: 20px;
-    line-height: 48px;
+    line-height: 30px;
 }
 .wish_list .main .details h3{
     color: #333333;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
 }
 .wish_list .main .details p{
@@ -1398,7 +1398,7 @@ body {
     color: #bb9a8d;
 }
 .wish_list .main .details .rating {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 .wish_list .main .details button {
@@ -1407,6 +1407,7 @@ body {
     border-radius: 5px;
     width: 170px;
     background-color: #ffffff;
+    height: 40px;
 }
 .wish_list .main .details button:hover {
     background-color: #fdaa2d;

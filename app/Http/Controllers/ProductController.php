@@ -35,9 +35,12 @@ class ProductController extends Controller
         // return $request;
         $product = new product();
 
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('admin/assets/img'), $imageName);
+
         $product->category_id       = $request->category_id;
         $product->name              = $request->name;
-        $product->image             = $request->image;
+        $product->image             = $imageName;
         $product->cost_price        = $request->cost_price;
         $product->sales_price       = $request->sales_price;
         $product->discount_price    = $request->discount_price;
@@ -88,9 +91,14 @@ class ProductController extends Controller
     {
         $product = product::find($id);
 
+        if(isset($request->image)){
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('admin/assets/img'), $imageName);
+        $product->image             = $imageName;
+        }
+
         $product->category_id       = $request->category_id;
         $product->name              = $request->name;
-        $product->image             = $request->image;
         $product->cost_price        = $request->cost_price;
         $product->sales_price       = $request->sales_price;
         $product->discount_price    = $request->discount_price;

@@ -20,7 +20,7 @@
                             </tr>
                             <tr>
                                 <td>Image</td>
-                                <td><img src="/admin/assets/img/aosomapto.gif" class="rounded float-start img-fluid" alt="..."></td>
+                                <td><img src="/admin/assets/img/{{ $product->image}}" class="rounded float-start img-fluid" alt="..."></td>
                             </tr>
                             <tr>
                                 <td>Cost Price</td>

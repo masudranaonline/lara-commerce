@@ -26,7 +26,7 @@
             <div class="row">
               <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
               <div class=" col-md-12">
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" name="image" id="formFile">
               </div>
             </div>
 
