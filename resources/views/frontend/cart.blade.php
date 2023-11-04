@@ -66,8 +66,8 @@
                         </div>
                         @endforeach
                         <div class="place_order pt-4">
-                            <button type="button" class="btn btn-primary btn-lg">Order as a Gift</button>
-                            <button type="button" class="btn btn-secondary btn-lg">Place Order</button>
+                            {{-- <button type="button" class="btn btn-primary btn-lg">Order as a Gift</button> --}}
+                            <a href="/checkout" class="btn btn-secondary btn-lg">Place Order</a>
                         </div>
                     </div>
                 </div>

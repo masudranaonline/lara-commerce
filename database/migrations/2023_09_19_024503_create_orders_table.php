@@ -13,27 +13,26 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('order_number')->uniqid();
-            $table->string('product_name')->nullable();
-            $table->integer('quantity')->nullable();
-            $table->float('tax')->nullable();
+            $table->float('tax_parcent')->nullable();
+            $table->float('tax_total')->nullable();
+            $table->float('discount')->nullable();
             $table->float('total_amount')->nullable();
             $table->boolean('status')->nullable();
-            $table->string('image')->nullable();
             $table->date('order_date')->nullable();
             $table->date('delivary_date')->nullable();
             $table->string('payment_method');
+
             $table->string('customer_name')->nullable();
             $table->string('mobile_no')->nullable();
             $table->string('email')->nullable();
             $table->string('house_no')->nullable();
             $table->string('road_no')->nullable();
             $table->string('village')->nullable();
-            $table->string('sub_district')->nullable();
+            $table->string('upazilla')->nullable();
             $table->string('district')->nullable();
             $table->string('division')->nullable();
             $table->string('country')->nullable();
-            $table->text('product_details')->nullable();
+
             $table->timestamps();
         });
     }

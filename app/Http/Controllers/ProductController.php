@@ -35,8 +35,14 @@ class ProductController extends Controller
         // return $request;
         $product = new product();
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('admin/assets/img'), $imageName);
+        if(isset($request->image)){
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('admin/assets/img'), $imageName);
+        }
+        else{
+            $imageName = null;
+        }
+
 
         $product->category_id       = $request->category_id;
         $product->name              = $request->name;
