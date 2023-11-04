@@ -5,7 +5,10 @@
     <main id="main" class="main">
     <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Product list</h5>
+          <div class="top">
+            <h5 class="card-title">Product list</h5>
+            <button>Add Product</button>
+          </div>
 
           <!-- Table with stripped rows -->
           <table class="table table-striped">

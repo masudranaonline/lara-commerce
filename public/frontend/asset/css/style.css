@@ -1396,6 +1396,8 @@ body {
 }
 .wish_list .main .details h6 strike{
     color: #bb9a8d;
+    font-size: 14px;
+    padding-left: 15px;
 }
 .wish_list .main .details .rating {
     font-size: 16px;
@@ -1417,7 +1419,7 @@ body {
     color: white!important;
 }
 .wish_list .main .delete {
-    padding: 8% 40%;
+    padding: 8% 0 0 40%;
     font-size: 18px;
     color: black;
 }

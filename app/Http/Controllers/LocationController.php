@@ -24,4 +24,21 @@ class LocationController extends Controller
        });
 
     }
+
+
+    public function upazillas($district)
+    {
+         $upazillas =  json_decode(file_get_contents(storage_path('data/upazillas.json')), true);
+
+        return  array_filter($upazillas, function($upazilla) use ($district){
+            if($upazilla['district_id'] == $district){
+                return $upazilla;
+            }
+       });
+
+    }
+
+
+
+
 }

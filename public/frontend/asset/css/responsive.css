@@ -6,18 +6,28 @@
 
 /* // tablet  devices laptop devices */
 @media(min-width:768px) and (max-width:991px) {
+    .wish_list .main .delete {
+        padding:0;
+    }
 
-   
 }
 
 /* // mobile landscape devices landscape phones*/
 @media(min-width:576px) and (max-width:767px) {
-    
+    .wish_list .main .delete {
+        padding:0;
+    }
+
 }
 
 /* // mobile  devices phones*/
 @media(min-width:320px) and (max-width:575px) {
-    
+    .wish_list .main .delete {
+        padding:0;
+    }
+    .wish_list .main{
+        display: inline;
+    }
 }
 
 /* // mobile  devices phones 480px */
@@ -25,5 +35,11 @@
     .menuber .sub_menu ul > li:hover ul {
         width: 230px;
 
+    }
+    .wish_list .main .delete {
+        padding:0;
+    }
+    .wish_list .main{
+        display: inline;
     }
 }

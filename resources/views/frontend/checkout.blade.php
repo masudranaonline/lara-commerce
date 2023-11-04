@@ -38,38 +38,35 @@
                                     <input class="name" name="name" type="text" placeholder="Enter your Name">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input class="phone mt-4" name="phone" type="text" placeholder="Phone No">
+                                            <label for="Name" class="mt-4">Phone No:</label>
+                                            <input class="phone " name="phone" type="text" placeholder="Phone No">
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="alter_phone_no mt-4" name="alt-phone" type="text" placeholder="Alternative Phone No">
+                                            <label for="Name" class="mt-4">Alternative Phone No:</label>
+                                            <input class="alter_phone_no " name="alt-phone" type="text" placeholder="Alternative Phone No">
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="cuntry mt-4" name="country" id="country" onchange="getDivisionList()">
+                                            <label for="Name" class="mt-4">Country:</label>
+                                            <select class="cuntry " name="country" id="country" onchange="getDivisionList()">
                                                 @foreach($countries as $country)
                                                 <option value="{{ $country['name'] }}">{{ $country['name'] }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="city mt-4" name="city" id="division" onchange="getDistrictList()">
+                                            <label for="Name" class="mt-4">Division:</label>
+                                            <select class="city " name="city" id="division" onchange="getDistrictList()">
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="area mt-4" name="area" id="district">
+                                            <label for="Name"class="mt-4">District:</label>
+                                            <select class="area " name="area" id="district" onchange="getUpazillaList()">
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="zone mt-4" name="zone" id="">
-                                                <option value="">Select Zone</option>
-                                                <option value="">আত্রা শিল্পা </option>
-                                                <option value="">খুলনা পৌরসভা </option>
-                                                <option value="">খুলনা বিশ্ববিদ্যালয়ের </option>
-                                                <option value="">খুলনা শিপইয়ার্ড </option>
-                                                <option value="">জাহানাবাদ সেনানিবাস </option>
-                                                <option value="">দৌলতপুর পৌরসভা</option>
-                                                <option value="">বিআইটি খুলনা </option>
-                                                <option value="">শিরামনি </option>
-                                                <option value="">সোনালী জুট মিলস </option>
+                                            <label for="Name" class="mt-4">Upazilla:</label>
+                                            <select class="zone " name="zone" id="upazilla">
+
                                             </select>
                                         </div>
                                     </div>
@@ -305,13 +302,27 @@
 
             function getDistrictList(){
                 const division = document.getElementById('division').value
-
+                // console.log(division)
                 fetch('http://localhost:8000/districts/' + division)
+
                 .then(res => res.json())
                 .then(res => {
                     document.getElementById('district').innerHTML = '';
                     for(const item in res){
                         document.getElementById('district').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
+                    };
+                })
+            }
+
+            function getUpazillaList(){
+                const district = document.getElementById('district').value
+
+                fetch('http://localhost:8000/upazillas/' + district)
+                .then(res => res.json())
+                .then(res => {
+                    document.getElementById('upazilla').innerHTML = '';
+                    for(const item in res){
+                        document.getElementById('upazilla').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
                     };
                 })
             }

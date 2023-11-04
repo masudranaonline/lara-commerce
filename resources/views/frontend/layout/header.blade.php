@@ -24,7 +24,7 @@
         <div class="container container-fluid">
             <div class="row">
                 <div class="col-md-3 col-sm-3">
-                    <a href="index.html"><img class="img-fluid" src="/frontend/asset/img/rokomari_logo.png" alt=""></a>
+                    <a href="/"><img class="img-fluid" src="/frontend/asset/img/rokomari_logo.png" alt=""></a>
                 </div>
                 <div class="col-md-6 ">
                     <form class="d-flex pt-3">
