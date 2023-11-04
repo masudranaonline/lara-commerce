@@ -1,7 +1,7 @@
 @extends('frontend/layout/master')
 
 @section('content')
-    
+
 
 
 
@@ -9,6 +9,7 @@
     <!-- start checkout page section -->
     <div class="shipping pt-5">
         <div class="container">
+            {{ Form::open(['url' => '/checkout', 'method' => 'POST', 'enctype' => 'multipart/form-data']) }}
             <div class="row">
                 <div class="col-md-8">
                     <div class="shipping_address product_bg shadow">
@@ -34,59 +35,31 @@
                             <div class="form_address">
                                 <form action="">
                                     <label for="Name">Name:</label>
-                                    <input class="name" type="text" placeholder="Enter your Name">
+                                    <input class="name" name="name" type="text" placeholder="Enter your Name">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <input class="phone mt-4" type="text" placeholder="Phone No">
+                                            <input class="phone mt-4" name="phone" type="text" placeholder="Phone No">
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="alter_phone_no mt-4" type="text" placeholder="Alternative Phone No">
+                                            <input class="alter_phone_no mt-4" name="alt-phone" type="text" placeholder="Alternative Phone No">
                                         </div>
-                                        <div class="col-md-6">            
-                                            <select class="cuntry mt-4" name="" id="">
-                                                <option value="Bangladesh">Bangladesh</option>
-                                                <option value="India">India</option>
-                                                <option value="Australia">Australia</option>
-                                                <option value="Canada">Canada</option>
-                                                <option value="China">China</option>
-                                                <option value="Denmark">Denmark</option>
-                                                <option value="Finland ">Finland </option>
+                                        <div class="col-md-6">
+                                            <select class="cuntry mt-4" name="country" id="country" onchange="getDivisionList()">
+                                                @foreach($countries as $country)
+                                                <option value="{{ $country['name'] }}">{{ $country['name'] }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="city mt-4" name="" id="">
-                                                <option value="">Select City</option>
-                                                <option value="">ঢাকা</option>
-                                                <option value="">রাজশাহী</option>
-                                                <option value="">কক্সবাজার</option>
-                                                <option value="">খুলনা</option>
-                                                <option value="">কিশোরগঞ্জ</option>
-                                                <option value="">সিলেট</option>
-                                                <option value="">রংপুর</option>
-                                                <option value="">কুড়িঁগ্রাম</option>
-                                                <option value="">কুমিল্লা</option>
-                                                <option value="">কুষ্টিয়া</option>
-                                                <option value="">খাগড়াছড়ি</option>
-                                                <option value="">গাইবান্ধা </option>
-                                                <option value="">গাজীপুর</option>
-                                                <option value="">গোপালগঞ্জ </option>
+                                            <select class="city mt-4" name="city" id="division" onchange="getDistrictList()">
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="area mt-4" name="" id="">
-                                                <option value="">Select Area</option>
-                                                <option value="">কয়রা</option>
-                                                <option value="">খান জাহান আলী</option>
-                                                <option value="">খালিশপুর</option>
-                                                <option value="">খুলনা  সদর </option>
-                                                <option value="">ডুমুরিয়া</option>
-                                                <option value="">তেরখাদা </option>
-                                                <option value="">দাকোপ</option>
-                                                <option value="">দিঘলিয়া </option>
+                                            <select class="area mt-4" name="area" id="district">
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <select class="zone mt-4" name="" id="">
+                                            <select class="zone mt-4" name="zone" id="">
                                                 <option value="">Select Zone</option>
                                                 <option value="">আত্রা শিল্পা </option>
                                                 <option value="">খুলনা পৌরসভা </option>
@@ -101,7 +74,7 @@
                                         </div>
                                     </div>
                                     <label class="mt-4" for="">Address</label>
-                                    <textarea class=" msg" name="" id="" cols="30" rows="5" placeholder="বাসা/ফ্ল্যাট নম্বর, পাড়া-মহল্লার নাম, পরিচিতির এলাকা উল্লেখ করুন"></textarea>
+                                    <textarea class=" msg" name="address" id="" cols="30" rows="5" placeholder="বাসা/ফ্ল্যাট নম্বর, পাড়া-মহল্লার নাম, পরিচিতির এলাকা উল্লেখ করুন"></textarea>
                                 </form>
                             </div>
 
@@ -109,17 +82,17 @@
                     </div>
 
                     <p class="happy_return_big"><img class="img-fluid " src="/frontend/asset/img/happy-return-big.svg" alt=""> Happy Return <span> (7 days return facility)</span></p>
-                   
+
                     <div class="shipping_address product_bg shadow pb-2">
                         <div class="heading">
                             <h5>Payment Method<span>(Please select only one! payment method)</span></h5>
                         </div>
 
-                        
+
                        <div class="payment_method pt-4">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-check payment_item">                           
+                                <div class="form-check payment_item">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <div class="method_name">
                                         <img class="img-fluid" src="/frontend/asset/img/cod.png" alt=""><br>
@@ -130,7 +103,7 @@
                                   </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-check payment_item">                           
+                                <div class="form-check payment_item">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <div class="method_name">
                                         <img class="img-fluid" src="/frontend/asset/img/cod.png" alt=""><br>
@@ -141,7 +114,7 @@
                                   </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-check payment_item">                           
+                                <div class="form-check payment_item">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <div class="method_name">
                                         <img class="img-fluid" src="/frontend/asset/img/cod.png" alt=""><br>
@@ -152,7 +125,7 @@
                                   </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-check payment_item">                           
+                                <div class="form-check payment_item">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <div class="method_name">
                                         <img class="img-fluid" src="/frontend/asset/img/cod.png" alt=""><br>
@@ -163,7 +136,7 @@
                                   </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-check payment_item">                           
+                                <div class="form-check payment_item">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <div class="method_name">
                                         <img class="img-fluid" src="/frontend/asset/img/cod.png" alt=""><br>
@@ -178,8 +151,8 @@
                             <div class="col-md-6"></div>
                             <div class="col-md-6"></div>
                         </div>
-                       
-                          
+
+
                        <div class="rulse_ecommerce pt-5 ">
                         <p>গ্রাহকদের সর্বোচ্চ সেবা নিশ্চিত করতে রকমারিতে রয়েছে সুবিশাল ইনভেন্টরি। স্টকে না থাকা প্রোডাক্টগুলো সাপ্লায়ারের নিকট থেকে সংগ্রহ করতে হয় -</p>
                         <div class="rulse_ditels pb-4">
@@ -197,12 +170,12 @@
                     </div>
 
                     <div class="order_btn">
-                        <a href="#">Conform Order</a>
+                        <input type="submit" name="submit" class="btn btn-warning">
                     </div>
                     </div>
 
                 </div>
-                
+
             </div>
             <div class="col-md-4">
                 <div class="checkout_summary product_bg shadow">
@@ -220,14 +193,15 @@
                                 </tr>
                                 <tr>
                                     <td>Total </td>
-                                    <td>443 TK.</td>
+                                    <td>{{ $total }} TK.</td>
+                                    <input type="hidden" name="total_amount" value="{{ $total }}">
                                 </tr>
-                                <tr class="total_tka">
+                                {{-- <tr class="total_tka">
                                     <td>Payable Total</td>
                                     <td>443 TK.</td>
-                                </tr>
+                                </tr> --}}
                             </tbody>
-                            
+
                         </table>
                         <div class="form-check rulse_checkbox" style="padding-left: 28px;">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -248,6 +222,7 @@
                 </div>
             </div>
             </div>
+            {{ Form::close() }}
         </div>
     </div>
 
@@ -302,17 +277,46 @@
                                 <h5>E-mail: <a href="#">01519521971</a><span>(Whatsapp Message Only)</span>or email to <a href="#">care@rokomari.com</a></h5>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-    
-    
-    
+
+
+
         <div class="copyright pt-2 pb-2" style="text-align: center;">
             <p>© 2012-2023 Rokomari.com</p>
         </div>
 
+
+        <script>
+            function getDivisionList(){
+                const country = document.getElementById('country').value
+
+                fetch('http://localhost:8000/divisions/' + country)
+                .then(res => res.json())
+                .then(res => {
+                    for(item of res){
+                        document.getElementById('division').innerHTML += '<option value="'+item.id+'">'+item.name+'</option>'
+                    }
+                })
+            }
+
+            function getDistrictList(){
+                const division = document.getElementById('division').value
+
+                fetch('http://localhost:8000/districts/' + division)
+                .then(res => res.json())
+                .then(res => {
+                    document.getElementById('district').innerHTML = '';
+                    for(const item in res){
+                        document.getElementById('district').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
+                    };
+                })
+            }
+
+
+        </script>
 
  @endsection

@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\cart;
+use Illuminate\Support\Facades\Auth;
+use App\Models\order;
+use App\Models\orderProductMapping;
+use Carbon\Carbon;
 
 class CheckoutController extends Controller
 {
@@ -11,7 +16,16 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        return view('frontend.checkout');
+
+
+        $cart = cart::where('user_id', Auth::id())->get();
+        $total = 0;
+        foreach ($cart as $item){
+            $total += $item->total;
+        }
+
+        $countries = json_decode(file_get_contents(storage_path('data/countries.json')), true);
+        return view('frontend.checkout', compact('total', 'countries'));
     }
 
     /**
@@ -27,7 +41,31 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $order = new order();
+
+        $order->total_amount = $request->total_amount;
+        $order->order_date = Carbon::now();
+        $order->customer_name = $request->customer_name;
+        $order->mobile_no = $request->mobile_no;
+        $order->payment_method = 'cash';
+
+        $order->save();
+
+        $cart = cart::where('user_id', Auth::id())->get();
+
+        foreach($cart as $item){
+            orderProductMapping::create([
+                'order_id' => $order->id,
+                'product_id' => $item->product_id,
+                'quantity' => $item->quantity,
+                'price' => $item->price,
+                'total_price' => $item->total,
+            ]);
+        }
+
+        cart::where('user_id', Auth::id())->delete();
+
+        return view('frontend.home');
     }
 
     /**
