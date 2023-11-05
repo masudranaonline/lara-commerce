@@ -98,9 +98,10 @@ class ProductController extends Controller
         $product = product::find($id);
 
         if(isset($request->image)){
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('admin/assets/img'), $imageName);
-        $product->image             = $imageName;
+            unlink('path/'. $product->image);
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('admin/assets/img'), $imageName);
+            $product->image             = $imageName;
         }
 
         $product->category_id       = $request->category_id;
@@ -135,7 +136,9 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        product::destroy($id);
+        $Product = product::find($id);
+        unlink('path/'.$Product->image);
+        $Product->delete();
         return  back();
     }
 }
