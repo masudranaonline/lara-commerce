@@ -42,6 +42,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+
+
+
     Route::group(['prefix' => 'admin-panel',], function(){
         Route::get('/', [AdminController::class, 'index']);
 
@@ -156,6 +159,9 @@ Route::get('divisions/{country}', [LocationController::class, 'divisions']);
 Route::get('districts/{division}', [LocationController::class, 'districts']);
 Route::get('upazillas/{district}', [LocationController::class, 'upazillas']);
 Route::get('unions/{upazilla}', [LocationController::class, 'unions']);
+
+
+Route::get('/myorder', [OrderController::class, 'myorder']);
 
 
 
