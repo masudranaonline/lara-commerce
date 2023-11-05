@@ -23,7 +23,7 @@ class OrderController extends Controller
      */
 
     public function myorder() {
-        return [];
+        return view('myorder');
     }
 
         /**

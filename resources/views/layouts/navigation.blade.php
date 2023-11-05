@@ -38,9 +38,8 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link>
-                            <a href="/myorder">{{ __('My order') }}</a>
-
+                        <x-dropdown-link href="/myorder">
+                            {{ __('My order') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
