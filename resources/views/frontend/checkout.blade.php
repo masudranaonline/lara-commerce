@@ -41,10 +41,10 @@
                                             <label for="Name" class="mt-4">Phone No:</label>
                                             <input class="phone " name="phone" type="text" placeholder="Phone No">
                                         </div>
-                                        <div class="col-md-6">
+                                        {{-- <div class="col-md-6">
                                             <label for="Name" class="mt-4">Alternative Phone No:</label>
                                             <input class="alter_phone_no " name="alt-phone" type="text" placeholder="Alternative Phone No">
-                                        </div>
+                                        </div> --}}
                                         <div class="col-md-6">
                                             <label for="Name" class="mt-4">Country:</label>
                                             <select class="cuntry " name="country" id="country" onchange="getDivisionList()">
@@ -65,7 +65,13 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="Name" class="mt-4">Upazilla:</label>
-                                            <select class="zone " name="zone" id="upazilla">
+                                            <select class="zone " name="zone" id="upazilla" onchange="getUnionList()">
+
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Name" class="mt-4">Union:</label>
+                                            <select class="zone " name="zone" id="union">
 
                                             </select>
                                         </div>
@@ -323,6 +329,18 @@
                     document.getElementById('upazilla').innerHTML = '';
                     for(const item in res){
                         document.getElementById('upazilla').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
+                    };
+                })
+            }
+            function getUnionList(){
+                const upazilla = document.getElementById('upazilla').value
+
+                fetch('http://localhost:8000/unions/' + upazilla)
+                .then(res => res.json())
+                .then(res => {
+                    document.getElementById('union').innerHTML = '';
+                    for(const item in res){
+                        document.getElementById('union').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
                     };
                 })
             }

@@ -38,6 +38,18 @@ class LocationController extends Controller
 
     }
 
+    public function unions($upazilla)
+    {
+        $unions =  json_decode(file_get_contents(storage_path('data/unions.json')), true);
+
+        return  array_filter($unions, function($union) use ($upazilla){
+            if($union['upazilla_id'] == $upazilla){
+                return $union;
+            }
+       });
+
+    }
+
 
 
 
