@@ -37,7 +37,7 @@ class ProductController extends Controller
 
         if(isset($request->image)){
             $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('admin/assets/img'), $imageName);
+            $request->image->move(public_path('admin/assets/productimage'), $imageName);
         }
         else{
             $imageName = null;
@@ -97,10 +97,10 @@ class ProductController extends Controller
     {
         $product = product::find($id);
 
-        if(isset($request->image)){
-            unlink('path/'. $product->image);
+        if(isset($request->image) == null){
+            unlink('admin/assets/productimage/'. $product->image);
             $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('admin/assets/img'), $imageName);
+            $request->image->move(public_path('admin/assets/productimage'), $imageName);
             $product->image             = $imageName;
         }
 
@@ -137,7 +137,7 @@ class ProductController extends Controller
     public function destroy(string $id)
     {
         $Product = product::find($id);
-        unlink('path/'.$Product->image);
+        unlink('admin/assets/productimage/'.$Product->image);
         $Product->delete();
         return  back();
     }

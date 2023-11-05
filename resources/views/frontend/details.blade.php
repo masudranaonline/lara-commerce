@@ -33,7 +33,7 @@
                     <div class="details">
 
                             <div class="img">
-                                <img class="img-fluid" src="/admin/assets/img/{{ $product->image }}" alt="">
+                                <img class="img-fluid" src="/admin/assets/productimage/{{ $product->image }}" alt="">
                             </div>
                         <div class="all_detail">
                             <div class="text">

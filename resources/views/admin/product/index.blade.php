@@ -32,7 +32,7 @@
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->sales_price }}</td>
                 <td>{{ $product->minimum_quantity  }}</td>
-                <td><img class="img-fluid" src="/admin/assets/img/{{ $product->image}}" style="height: 44px; width: 45px;" alt=""></td>
+                <td><img class="img-fluid" src="/admin/assets/productimage/{{ $product->image}}" style="height: 44px; width: 45px;" alt=""></td>
                 <td class="button-group">
                   <a href="/admin-panel/product/show/{{ $product->id }}" class="btn btn-info"><i class="bi bi-view-stacked"></i></a>
                   <a href="/admin-panel/product/edit/{{ $product->id }}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>

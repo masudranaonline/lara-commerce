@@ -79,7 +79,7 @@
                             @foreach($products as $product)
                             <div class="col-md-3 col-sm-3 pb-5">
                                 <div class="list_page_ditels text-center">
-                                    <img class="img-fluid" src="/admin/assets/img/{{ $product->image }}" alt="">
+                                    <img class="img-fluid" src="/admin/assets/productimage/{{ $product->image }}" alt="">
                                         <h6>{{ $product->name }}</h6>
                                         <p>{{ $product->category->name }}</p>
                                         <div class="rating-section text-center rating_color">
