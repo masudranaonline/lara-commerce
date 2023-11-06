@@ -33,7 +33,7 @@ class OrderController extends Controller
 
 
      public function myorder() {
-         $orders = order::where('user_id', Auth::id())->with(['orderProducts.product'])->get();
+        $orders = order::where('user_id', Auth::id())->with(['orderProducts.product'])->get()->toArray();
         return view('myorder', compact('orders'));
     }
 

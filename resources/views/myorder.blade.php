@@ -16,22 +16,18 @@
             @foreach ($orders as $order )
                 <div class=" border-bottom p-6 bg-white shadow-sm sm:rounded mt-2">
                     <div class=" border-b-2">
-                    <p>Order <span>#{{ $order->id}}</span></p>
+                    <p>Order <span>#{{ $order['id']}}</span></p>
                         <p>Placed on 05 Nov 2023</p>
                     </div>
-                   @if ($order->order_product_mapping )
+                   @foreach($order['order_products'] as $item )
                     <div class="flex justify-between p-4">
-                        {{-- @foreach ($order_product_mapping as $product) --}}
-
-                            <img class=" h-24" src="/admin/assets/productimage/" alt="">
-                            <h4>.{{  $order->order_product_mapping->product->name }}</h4>
-                            <p>Quantity <span class="text-red-300">{{ $order->order_product_mapping->quantity }}</span></p>
-                            <a href="" class="border bg-red-100 rounded-lg h-8 p-1 text-sm">Delivered</a>
+                            <img class=" h-24" src="/admin/assets/productimage/{{  $item['product']['image'] }}" alt="">
+                            <h4>{{  $item['product']['name'] }}</h4>
+                            <p>Quantity <span class="text-red-300">{{  $item['quantity'] }}</span></p>
+                            <button href="" class="h-8 px-2 bg-blue-600 text-white font-semibold rounded-sm items-center justify-center hover:bg-blue-700">Delivered</button>
                             <h5>Delivered on 05 Nov 2023</h5>
-
-                        {{-- @endfore   ach --}}
                     </div>
-                   @endif
+                   @endforeach
                 </div>
             @endforeach
         </div>

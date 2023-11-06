@@ -98,7 +98,10 @@ class ProductController extends Controller
         $product = product::find($id);
 
         if(isset($request->image) == null){
-            unlink('admin/assets/productimage/'. $product->image);
+            if(file_exists('admin/assets/productimage/'. $product->image)){
+                unlink('admin/assets/productimage/'. $product->image);
+            }
+
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('admin/assets/productimage'), $imageName);
             $product->image             = $imageName;
