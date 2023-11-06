@@ -42,10 +42,10 @@
 
 
 
-                    @if(Auth::id() == null)
-                    <a href="/login" class="sign">Login</a>
-                    @else
+                    @if(Auth::user())
                     <a href="/dashboard" class="sign">{{ Auth::user()->name }}</a>
+                    @else
+                    <a href="/login" class="sign">Login</a>
                     @endif
 
                 </div>
