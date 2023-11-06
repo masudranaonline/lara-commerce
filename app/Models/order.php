@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\orderProductMapping;
 
 class order extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'tax_parcent',
         'tax_total',
         'discount',
@@ -22,12 +24,15 @@ class order extends Model
         'customer_name',
         'mobile_no',
         'email',
-        'house_no',
-        'road_no',
-        'village',
-        'upazilla',
-        'district',
-        'division',
         'country',
+        'division',
+        'district',
+        'upazilla',
+        'union',
+        'address',
     ];
+
+    public function orderProducts(){
+        return $this->hasMany(orderProductMapping::class, 'order_id', 'id');
+    }
 }

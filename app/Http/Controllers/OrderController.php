@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\order;
 use App\Models\product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class OrderController extends Controller
@@ -22,8 +23,18 @@ class OrderController extends Controller
      * Display myorderlist
      */
 
-    public function myorder() {
-        return view('myorder');
+
+
+
+
+
+
+
+
+
+     public function myorder() {
+         $orders = order::where('user_id', Auth::id())->with(['orderProducts.product'])->get();
+        return view('myorder', compact('orders'));
     }
 
         /**

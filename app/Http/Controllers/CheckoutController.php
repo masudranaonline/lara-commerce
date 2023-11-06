@@ -42,12 +42,20 @@ class CheckoutController extends Controller
     public function store(Request $request)
     {
         $order = new order();
+        $order->user_id         = Auth::id();
+        $order->total_amount    = $request->total_amount;
+        $order->order_date      = Carbon::now();
+        $order->customer_name   = $request->customer_name;
+        $order->mobile_no       = $request->mobile_no;
+        $order->email           = $request->email;
+        $order->payment_method  = 'cash';
 
-        $order->total_amount = $request->total_amount;
-        $order->order_date = Carbon::now();
-        $order->customer_name = $request->customer_name;
-        $order->mobile_no = $request->mobile_no;
-        $order->payment_method = 'cash';
+        $order->country     = $request->country;
+        $order->division    = $request->division;
+        $order->district    = $request->district;
+        $order->upazilla    = $request->upazilla;
+        $order->union       = $request->union;
+        $order->address     = $request->address;
 
         $order->save();
 
@@ -55,11 +63,11 @@ class CheckoutController extends Controller
 
         foreach($cart as $item){
             orderProductMapping::create([
-                'order_id' => $order->id,
-                'product_id' => $item->product_id,
-                'quantity' => $item->quantity,
-                'price' => $item->price,
-                'total_price' => $item->total,
+                'order_id'      => $order->id,
+                'product_id'    => $item->product_id,
+                'quantity'      => $item->quantity,
+                'price'         => $item->price,
+                'total_price'   => $item->total,
             ]);
         }
 

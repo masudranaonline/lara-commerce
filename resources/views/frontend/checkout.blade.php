@@ -34,17 +34,19 @@
                             </div>
                             <div class="form_address">
                                 <form action="">
-                                    <label for="Name">Name:</label>
-                                    <input class="name" name="name" type="text" placeholder="Enter your Name">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label for="Name" class="mt-4">Phone No:</label>
-                                            <input class="phone " name="phone" type="text" placeholder="Phone No">
+                                            <label for="Name" class="mt-4">Name:</label>
+                                            <input class="name" name="customer_name" type="text" placeholder="Enter your Name">
                                         </div>
-                                        {{-- <div class="col-md-6">
-                                            <label for="Name" class="mt-4">Alternative Phone No:</label>
-                                            <input class="alter_phone_no " name="alt-phone" type="text" placeholder="Alternative Phone No">
-                                        </div> --}}
+                                        <div class="col-md-6">
+                                            <label for="Name" class="mt-4">Phone No:</label>
+                                            <input class="phone " name="mobile_no" type="text" placeholder="Phone No">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Name" class="mt-4">Email:</label>
+                                            <input class="name" name="email" type="text" placeholder="Enter Your Email">
+                                        </div>
                                         <div class="col-md-6">
                                             <label for="Name" class="mt-4">Country:</label>
                                             <select class="cuntry " name="country" id="country" onchange="getDivisionList()">
@@ -55,23 +57,23 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="Name" class="mt-4">Division:</label>
-                                            <select class="city " name="city" id="division" onchange="getDistrictList()">
+                                            <select class="city " name="division" id="division" onchange="getDistrictList()">
                                             </select>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="Name"class="mt-4">District:</label>
-                                            <select class="area " name="area" id="district" onchange="getUpazillaList()">
+                                            <select class="area " name="district" id="district" onchange="getUpazillaList()">
                                             </select>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="Name" class="mt-4">Upazilla:</label>
-                                            <select class="zone " name="zone" id="upazilla" onchange="getUnionList()">
+                                            <select class="zone " name="upazilla" id="upazilla" onchange="getUnionList()">
 
                                             </select>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="Name" class="mt-4">Union:</label>
-                                            <select class="zone " name="zone" id="union">
+                                            <select class="zone " name="union" id="union">
 
                                             </select>
                                         </div>

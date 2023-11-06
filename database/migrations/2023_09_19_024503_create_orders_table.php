@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->float('tax_parcent')->nullable();
             $table->float('tax_total')->nullable();
             $table->float('discount')->nullable();
@@ -25,13 +26,12 @@ return new class extends Migration
             $table->string('customer_name')->nullable();
             $table->string('mobile_no')->nullable();
             $table->string('email')->nullable();
-            $table->string('house_no')->nullable();
-            $table->string('road_no')->nullable();
-            $table->string('village')->nullable();
-            $table->string('upazilla')->nullable();
-            $table->string('district')->nullable();
-            $table->string('division')->nullable();
             $table->string('country')->nullable();
+            $table->string('division')->nullable();
+            $table->string('district')->nullable();
+            $table->string('upazilla')->nullable();
+            $table->string('union')->nullable();
+            $table->string('address')->nullable();
 
             $table->timestamps();
         });

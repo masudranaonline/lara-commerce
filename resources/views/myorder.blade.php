@@ -13,19 +13,27 @@
                 </div>
 
             </div>
-            <div class=" border-bottom p-6 bg-white shadow-sm sm:rounded mt-2">
-                <div class=" border-b-2">
-                    <p>Order <span>#4654654654654</span></p>
-                    <p>Placed on 05 Nov 2023</p>
+            @foreach ($orders as $order )
+                <div class=" border-bottom p-6 bg-white shadow-sm sm:rounded mt-2">
+                    <div class=" border-b-2">
+                    <p>Order <span>#{{ $order->id}}</span></p>
+                        <p>Placed on 05 Nov 2023</p>
+                    </div>
+                   @if ($order->order_product_mapping )
+                    <div class="flex justify-between p-4">
+                        {{-- @foreach ($order_product_mapping as $product) --}}
+
+                            <img class=" h-24" src="/admin/assets/productimage/" alt="">
+                            <h4>.{{  $order->order_product_mapping->product->name }}</h4>
+                            <p>Quantity <span class="text-red-300">{{ $order->order_product_mapping->quantity }}</span></p>
+                            <a href="" class="border bg-red-100 rounded-lg h-8 p-1 text-sm">Delivered</a>
+                            <h5>Delivered on 05 Nov 2023</h5>
+
+                        {{-- @endfore   ach --}}
+                    </div>
+                   @endif
                 </div>
-                <div class="flex justify-between p-4">
-                    <img class=" h-24" src="frontend/asset/img/bag.jpg" alt="">
-                    <h4>Lorem ipsum dolor sit amet.</h4>
-                    <p>Quantity <span>1</span></p>
-                    <a href="">Delivered</a>
-                    <h5>Delivered on 05 Nov 2023</h5>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </x-app-layout>
