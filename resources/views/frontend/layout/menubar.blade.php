@@ -46,7 +46,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">প্রকাশনী</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">ই-বুক</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">স্টকের প্রোডাক্ট সমূহ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">নতুন পণ্যসমূহ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/products">All Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">ইসলামি বই</a></li>
                     </ul>
                   </div>
