@@ -6,6 +6,7 @@ use App\Models\product;
 use App\Models\wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\cart;
 
 class WishController extends Controller
 {
@@ -82,6 +83,12 @@ class WishController extends Controller
     public function destroy(string $id)
     {
         wishlist::destroy($id);
+        return back();
+    }
+
+    public function addToCart($productId){
+        cart::store($productId);
+        wishlist::where('product_id', $productId)->delete();
         return back();
     }
 }

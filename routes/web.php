@@ -154,6 +154,7 @@ Route::get('/products/show/{id}', [ProductlistController::class, 'show']);
 Route::get('/wishlist', [WishController::class, 'index']);
 Route::post('/wishlist/store/{id}', [WishController::class, 'store']);
 Route::post('/wishlist/destroy/{id}', [WishController::class, 'destroy']);
+Route::post('/wishlist/addtocart/{id}', [WishController::class, 'addToCart']);
 
 Route::get('divisions/{country}', [LocationController::class, 'divisions']);
 Route::get('districts/{division}', [LocationController::class, 'districts']);
