@@ -25,7 +25,7 @@
                             <h6>Tk. {{ $wishItem->price}} <strike>Tk. 100</strike></h6>
                             <p class="rating">1 Ratings |</p>
                             {{ Form::open([
-                                'url' => '/cart/store/'.$wishItem->product->id,
+                                'url' => '/wishlist/addtocart/'.$wishItem->product->id,
                                 'method' => 'POST',
                                 'enctype' => 'multipart/form-data'
                             ])}}
