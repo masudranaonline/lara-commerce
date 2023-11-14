@@ -25,7 +25,7 @@
                 @php $serial ++; @endphp
                 <tr>
                   <td scope="row">{{ $serial }}</td>
-                  <td>{{ $order->order_number }}</td>
+                  <td>{{ $order->id }}</td>
                   <td>{{ $order->product_name }}</td>
                   <td>{{ $order->quantity }}</td>
                   <td>{{ $order->total_amount }}</td>

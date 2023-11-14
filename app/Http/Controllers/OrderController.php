@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class OrderController extends Controller
 {
     /**
@@ -15,7 +16,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = order::all();
+        // return $orders = order::with('order_product_mappings')->get();
+        return $orders = order::with('order_product_mappings')->where('id', 'order_product_mappings.order_id')->get();
+
         return view('admin.order.index', compact('orders'));
     }
 

@@ -18,7 +18,7 @@
                         @foreach ($wishItems as $wishItem)
                     <div class="main p-4">
 
-                        <img src="/admin/assets/productimage/{{ $wishItem->product->image}}" alt="">
+                        <img style="height: 120px;" src="/admin/assets/productimage/{{ $wishItem->product->image}}" alt="">
                         <div class="details">
                             <h3>{{ $wishItem->product->name}}</h3>
                             <p>{{ $wishItem->product->category->name}}</p>
