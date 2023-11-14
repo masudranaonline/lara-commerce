@@ -17,7 +17,11 @@ class OrderController extends Controller
     public function index()
     {
         // return $orders = order::with('order_product_mappings')->get();
-        return $orders = order::with('order_product_mappings')->where('id', 'order_product_mappings.order_id')->get();
+        $orders = order::with('orderProducts')->get();
+
+        foreach($orders  as $order){
+            return $order;
+        }
 
         return view('admin.order.index', compact('orders'));
     }

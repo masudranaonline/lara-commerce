@@ -317,7 +317,7 @@
                 .then(res => {
                     document.getElementById('district').innerHTML = '';
                     for(const item in res){
-                        document.getElementById('district').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
+                        document.getElementById('district').innerHTML += '<option value="'+res[item].name+'">'+res[item].name+'</option>'
                     };
                 })
             }
@@ -330,7 +330,7 @@
                 .then(res => {
                     document.getElementById('upazilla').innerHTML = '';
                     for(const item in res){
-                        document.getElementById('upazilla').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
+                        document.getElementById('upazilla').innerHTML += '<option value="'+res[item].name+'">'+res[item].name+'</option>'
                     };
                 })
             }
@@ -342,7 +342,7 @@
                 .then(res => {
                     document.getElementById('union').innerHTML = '';
                     for(const item in res){
-                        document.getElementById('union').innerHTML += '<option value="'+res[item].id+'">'+res[item].name+'</option>'
+                        document.getElementById('union').innerHTML += '<option value="'+res[item].name+'">'+res[item].name+'</option>'
                     };
                 })
             }
